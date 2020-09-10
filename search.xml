@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>整理一些css样式</title>
-    <url>/2020/08/26/%E5%89%8D%E7%AB%AF/%E4%B8%80%E4%BA%9Bcss%E6%A0%B7%E5%BC%8F%E5%AE%9E%E7%8E%B0/</url>
+    <url>/%E5%89%8D%E7%AB%AF/%E4%B8%80%E4%BA%9Bcss%E6%A0%B7%E5%BC%8F%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h1 id="整理一些css样式"><a href="#整理一些css样式" class="headerlink" title="整理一些css样式"></a>整理一些css样式</h1><h3 id="渐变文字"><a href="#渐变文字" class="headerlink" title="渐变文字"></a>渐变文字</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">linear-gradient</span>(360<span class="selector-tag">deg</span>, <span class="selector-id">#97E9FF</span> 0%, <span class="selector-id">#FFFFFF</span> 100%);</span><br><span class="line"><span class="selector-tag">-webkit-background-clip</span>: <span class="selector-tag">text</span>;</span><br><span class="line"><span class="selector-tag">-webkit-text-fill-color</span>: <span class="selector-tag">transparent</span>;</span><br></pre></td></tr></table></figure>
 
 <h3 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: 0 0 12<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(24, 230, 255, 0<span class="selector-class">.63</span>);</span><br></pre></td></tr></table></figure>
