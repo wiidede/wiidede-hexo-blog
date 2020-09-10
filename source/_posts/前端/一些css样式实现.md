@@ -1,3 +1,11 @@
+---
+title: 整理一些css样式
+date: 2020-08-26 22:02:10
+tags: ['前端', 'css']
+categories: 前端
+id: several-css-style
+---
+
 # 整理一些css样式
 
 ### 渐变文字
