@@ -4,23 +4,23 @@ menu:
   归档: /archives
   分类: /categories
   标签: /tags
-  旅行: /tags/旅行/
-  摄影: http://shenyu-vip.lofter.com
-  友链: /friends
-  关于我: /2019/about
+#  旅行: /tags/旅行/
+#  摄影: http://shenyu-vip.lofter.com
+#  友链: /friends
+#  关于我: /2019/about
 
 # 站点次标题和打字动效
 # https://github.com/mattboldt/typed.js
 subtitle:
-  enable: true # 是否开启动效
-  text: 面朝大海，春暖花开 # 显示的文字
-  text2: 愿你一生努力，一生被爱 # 滚动播放，如果不需要可以留空
-  text3: 想要的都拥有，得不到的都释怀 # 最多支持三段文字
-  startDelay: 0 # 延迟时间
-  typeSpeed: 200 # 打字速度
-  loop: true # 是否循环
-  backSpeed: 100 # 回退速度
-  showCursor: true # 是否显示光标
+  enable: true  # 是否开启动效
+  text: 愿你眼里有光，心里有爱  # 显示的文字
+  #  text2: 愿你一生努力，一生被爱   # 滚动播放，如果不需要可以留空
+  #  text3: 想要的都拥有，得不到的都释怀  # 最多支持三段文字
+  startDelay: 0   # 延迟时间
+  typeSpeed: 200  # 打字速度
+  loop: true  # 是否循环
+  backSpeed: 100  # 回退速度
+  showCursor: true  # 是否显示光标
 
 # 网站图标和侧边栏logo
 favicon: /favicon.ico
@@ -80,7 +80,7 @@ word_count:
 
 # 打赏
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
-reward_type: 2
+reward_type: 0
 # 打赏wording
 reward_wording: "请我喝杯咖啡吧~"
 # 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg
@@ -122,7 +122,7 @@ layout:
 # GitHub Ribbons-封面右上角的forkme，换样式直接在source/images目录下替换forkme图片
 github:
   # (关闭请设置为false)
-  enable: true
+  enable: false
   url: https://github.com/Shen-Yu/hexo-theme-ayer
 
 # 网易云音乐插件
@@ -139,7 +139,7 @@ busuanzi:
 
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
-  enable: true
+  enable: false
   url: https://s9.cnzz.com/z_stat.php?id=1278069914&web_id=1278069914
 
 # Google Analytics
@@ -161,7 +161,7 @@ katex:
 since: 2015
 
 # 是否显示页脚信息(建议保留)
-pageFooter: true
+pageFooter: false
 
 # ICP备案信息尾部显示
 icp:
@@ -201,8 +201,8 @@ friends_link:
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
   enable: true
-  app_id: #
-  app_key: #
+  app_id: kdLBgGeN6AO23LTQWDAqRttz-9Nh9j0Va
+  app_key: hWmkOGBqEpSlw81Gbqn4CSuF
 # Valine配置
 valine:
   enable: true # 是否启用
