@@ -41,6 +41,17 @@
 <body>
   <div id="app">
     
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
       
     <main class="content on">
       
@@ -58,12 +69,6 @@
         
       </div>
       <div>
-        
-        <img
-          src="/images/ayer.svg"
-          class="cover-logo"
-          alt="wiidede&#39;s blog"
-        />
         
       </div>
     </div>
@@ -173,18 +178,7 @@
   </div>
    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="整理一些css样式"><a href="#整理一些css样式" class="headerlink" title="整理一些css样式"></a>整理一些css样式</h1><h3 id="渐变文字"><a href="#渐变文字" class="headerlink" title="渐变文字"></a>渐变文字</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">linear-gradient</span>(360<span class="selector-tag">deg</span>, <span class="selector-id">#97E9FF</span> 0%, <span class="selector-id">#FFFFFF</span> 100%);</span><br><span class="line"><span class="selector-tag">-webkit-background-clip</span>: <span class="selector-tag">text</span>;</span><br><span class="line"><span class="selector-tag">-webkit-text-fill-color</span>: <span class="selector-tag">transparent</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: 0 0 12<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(24, 230, 255, 0<span class="selector-class">.63</span>);</span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
@@ -213,12 +207,18 @@
     <ul>
       <li>
         Copyrights &copy;
-        2015-2020
+        2020
         <i class="ri-heart-fill heart_icon"></i> wiidede
       </li>
     </ul>
     <ul>
       <li>
+        
+        
+        
+        由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动
+        <span class="division">|</span>
+        主题 - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
@@ -295,10 +295,6 @@
         <i class="ri-search-line"></i>
       </a>
       
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
       
     </li>
   </ul>
@@ -474,6 +470,11 @@
 
 <!-- ClickBoom1 -->
 
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+
+
 <!-- ClickBoom2 -->
 
 <!-- CodeCopy -->
@@ -538,6 +539,10 @@
 
 
 <!-- CanvasBackground -->
+
+
+<script src="/js/dz.js"></script>
+
 
 
     
