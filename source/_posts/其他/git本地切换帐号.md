@@ -1,11 +1,13 @@
 ---
 title: git 本地切换帐号
 date: 2020-09-15 12:11:52
-tags: ['网站', 'RSS']
-categories: 网站
-id: thinkingAboutRSS
+tags: ['git']
+categories: 其他
+id: gitChangeLocalAccount
 reward: true
 ---
+
+## git 切换本地帐号
 
 ```bash
 git config --local user.name wiidede
