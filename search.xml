@@ -51,13 +51,12 @@
   <entry>
     <title>git 本地切换帐号</title>
     <url>/%E5%85%B6%E4%BB%96/git%E6%9C%AC%E5%9C%B0%E5%88%87%E6%8D%A2%E5%B8%90%E5%8F%B7/</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> user.name wiidede</span><br><span class="line">git config --<span class="built_in">local</span> user.email wiixdede@gmail.com</span><br></pre></td></tr></table></figure>]]></content>
+    <content><![CDATA[<h2 id="git-切换本地帐号"><a href="#git-切换本地帐号" class="headerlink" title="git 切换本地帐号"></a>git 切换本地帐号</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> user.name wiidede</span><br><span class="line">git config --<span class="built_in">local</span> user.email wiixdede@gmail.com</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>网站</category>
+        <category>其他</category>
       </categories>
       <tags>
-        <tag>网站</tag>
-        <tag>RSS</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>

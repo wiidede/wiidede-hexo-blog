@@ -6,7 +6,7 @@
   <link href="https://wiidede.github.io/atom.xml" rel="self"/>
   
   <link href="https://wiidede.github.io/"/>
-  <updated>2020-09-15T04:14:44.605Z</updated>
+  <updated>2020-09-15T04:20:21.705Z</updated>
   <id>https://wiidede.github.io/</id>
   
   <author>
@@ -21,25 +21,23 @@
     <link href="https://wiidede.github.io/%E5%85%B6%E4%BB%96/git%E6%9C%AC%E5%9C%B0%E5%88%87%E6%8D%A2%E5%B8%90%E5%8F%B7/"/>
     <id>https://wiidede.github.io/%E5%85%B6%E4%BB%96/git%E6%9C%AC%E5%9C%B0%E5%88%87%E6%8D%A2%E5%B8%90%E5%8F%B7/</id>
     <published>2020-09-15T12:11:52.000Z</published>
-    <updated>2020-09-15T04:14:44.605Z</updated>
+    <updated>2020-09-15T04:20:21.705Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;git-切换本地帐号&quot;&gt;&lt;a href=&quot;#git-切换本地帐号&quot; class=&quot;headerlink&quot; title=&quot;git 切换本地帐号&quot;&gt;&lt;/a&gt;git 切换本地帐号&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
         
       
     
     
     
-    <category term="网站" scheme="https://wiidede.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    <category term="其他" scheme="https://wiidede.github.io/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-    <category term="网站" scheme="https://wiidede.github.io/tags/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="RSS" scheme="https://wiidede.github.io/tags/RSS/"/>
+    <category term="git" scheme="https://wiidede.github.io/tags/git/"/>
     
   </entry>
   
@@ -47,8 +45,8 @@
     <title>关于我</title>
     <link href="https://wiidede.github.io/AboutMe/"/>
     <id>https://wiidede.github.io/AboutMe/</id>
-    <published>2020-09-15T04:14:44.605Z</published>
-    <updated>2020-09-15T04:14:44.605Z</updated>
+    <published>2020-09-15T04:20:21.705Z</published>
+    <updated>2020-09-15T04:20:21.705Z</updated>
     
     
       
@@ -76,8 +74,8 @@
     <title>关于RSS的一些想法</title>
     <link href="https://wiidede.github.io/RSS/"/>
     <id>https://wiidede.github.io/RSS/</id>
-    <published>2020-09-15T04:14:44.605Z</published>
-    <updated>2020-09-15T04:14:44.605Z</updated>
+    <published>2020-09-15T04:20:21.705Z</published>
+    <updated>2020-09-15T04:20:21.705Z</updated>
     
     
       
@@ -104,8 +102,8 @@
     <title>整理一些css样式</title>
     <link href="https://wiidede.github.io/%E5%89%8D%E7%AB%AF/%E4%B8%80%E4%BA%9Bcss%E6%A0%B7%E5%BC%8F%E5%AE%9E%E7%8E%B0/"/>
     <id>https://wiidede.github.io/%E5%89%8D%E7%AB%AF/%E4%B8%80%E4%BA%9Bcss%E6%A0%B7%E5%BC%8F%E5%AE%9E%E7%8E%B0/</id>
-    <published>2020-09-15T04:14:44.605Z</published>
-    <updated>2020-09-15T04:14:44.605Z</updated>
+    <published>2020-09-15T04:20:21.705Z</published>
+    <updated>2020-09-15T04:20:21.705Z</updated>
     
     
       
@@ -132,7 +130,7 @@
     <link href="https://wiidede.github.io/%E7%BD%91%E7%AB%99ToDo/"/>
     <id>https://wiidede.github.io/%E7%BD%91%E7%AB%99ToDo/</id>
     <published>2020-09-11T01:17:23.000Z</published>
-    <updated>2020-09-15T04:14:44.605Z</updated>
+    <updated>2020-09-15T04:20:21.709Z</updated>
     
     
       
