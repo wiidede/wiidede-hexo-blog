@@ -31,9 +31,13 @@
 
 .article-meta
   clearfix()
+  .article-meta-timeAndCategory
+    display flex
 
 .article-date
   @extend $block-caption
+  display flex
+  align-items center
   &::before
     content '\eaf2'
     margin-right .15rem
@@ -41,8 +45,9 @@
     opacity .5
 
 .article-category
-  display inline-block
   margin-left 1.5rem
+  display flex
+  align-items center
   &:before
     content "\efde"
     font-family remixicon
