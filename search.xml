@@ -49,6 +49,46 @@
       </tags>
   </entry>
   <entry>
+    <title>正则表达式 向前最短匹配</title>
+    <url>/Python/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%20%E5%90%91%E5%89%8D%E6%9C%80%E7%9F%AD%E5%8C%B9%E9%85%8D/</url>
+    <content><![CDATA[<h1 id="正则表达式-向前最短匹配"><a href="#正则表达式-向前最短匹配" class="headerlink" title="正则表达式 向前最短匹配"></a>正则表达式 向前最短匹配</h1><p>使用正则表达式  <code>.*?</code>  可以向后匹配最短的，那么如何向前匹配最短的呢</p>
+<p>向前的不再能使用 <code>.*?</code> ，因为它会从第一个字母向后找，直到有匹配的，也就相当于找了一个最长的匹配</p>
+<p>所以这时候应该换一种思路</p>
+<p>使用 <code>a[^a]+</code> 来匹配，也就是说要匹配的字符串前面不能有a，那就是最短的匹配</p>
+<p>我们来看一个 Python 写的例子：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">reg = <span class="string">r&#x27;```[^```]+&#x27;</span> + clipContent + <span class="string">r&#x27;.*?```&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们要从 <code>clipContent</code> 向前找到第一次出现 ```` ` ，所以思路应该是向前找到第一个你所想要的内容</p>
+<p><a href="/Python/%E7%9B%91%E5%90%AC%E5%89%AA%E8%B4%B4%E6%9D%BF%20%E5%9C%A8%E6%96%87%E5%AD%97%E4%B8%AD%E5%8C%B9%E9%85%8D%E7%9B%B8%E5%BA%94%E7%9A%84%E5%86%85%E5%AE%B9%20%E9%80%82%E7%94%A8%E4%BA%8E%E9%A2%98%E5%BA%93/">这里</a>有一个实际案例</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>正则表达式</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>监听剪贴板 在文字中匹配相应的内容 适用于题库</title>
+    <url>/Python/%E7%9B%91%E5%90%AC%E5%89%AA%E8%B4%B4%E6%9D%BF%20%E5%9C%A8%E6%96%87%E5%AD%97%E4%B8%AD%E5%8C%B9%E9%85%8D%E7%9B%B8%E5%BA%94%E7%9A%84%E5%86%85%E5%AE%B9%20%E9%80%82%E7%94%A8%E4%BA%8E%E9%A2%98%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="监听剪贴板-在文字中匹配相应的内容-适用于题库"><a href="#监听剪贴板-在文字中匹配相应的内容-适用于题库" class="headerlink" title="监听剪贴板 在文字中匹配相应的内容 适用于题库"></a>监听剪贴板 在文字中匹配相应的内容 适用于题库</h1><p>最近有考试，还有题库，我就把之前写的监听剪贴板来搜索题库的程序拿了出来。虽然可能你更希望直接帮你答好，但有些网站只有一次考试机会，所以监听剪贴板反而更通用，虽然你 <code>ctrl + c</code> 可能会按的有点累，但总比一题一题搜（<code>ctrl + c</code> <code>切换到题库</code> <code>ctrl + f</code>   <code>ctrl + v</code>）快一点</p>
+<p>当然如果你有更好的方法也可以留言或者告诉我</p>
+<p>话不多说，很简单的代码直接上了</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pyperclip</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    lastClipContent = <span class="literal">None</span></span><br><span class="line">    txt = open(<span class="string">&quot;xxxxxxxxxxxxx题库.txt&quot;</span>, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).read()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        time.sleep(<span class="number">0.3</span>)</span><br><span class="line">        clipContent = pyperclip.paste()</span><br><span class="line">        <span class="keyword">if</span> clipContent != lastClipContent:</span><br><span class="line">            lastClipContent = clipContent</span><br><span class="line">            reg = <span class="string">r&#x27;```[^```]+&#x27;</span> + clipContent + <span class="string">r&#x27;.*?```&#x27;</span></span><br><span class="line">            regPattern = re.compile(reg, re.S | re.M)</span><br><span class="line">            result = regPattern.findall(txt)</span><br><span class="line">            <span class="keyword">if</span> result:</span><br><span class="line">                print(<span class="string">&#x27;\n\n------------------------&#x27;</span>)</span><br><span class="line">                <span class="keyword">for</span> item <span class="keyword">in</span> result:</span><br><span class="line">                    print(item.replace(<span class="string">&#x27;```&#x27;</span>, <span class="string">&#x27;&#x27;</span>))</span><br><span class="line">                print(<span class="string">&#x27;------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p>其中关于正则表示的原理可以参考<a href="/Python/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%20%E5%90%91%E5%89%8D%E6%9C%80%E7%9F%AD%E5%8C%B9%E9%85%8D/">这里</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>正则表达式</tag>
+        <tag>Python</tag>
+        <tag>监听剪贴板</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git 本地切换帐号</title>
     <url>/%E5%85%B6%E4%BB%96/git%E6%9C%AC%E5%9C%B0%E5%88%87%E6%8D%A2%E5%B8%90%E5%8F%B7/</url>
     <content><![CDATA[<h2 id="git-切换本地帐号"><a href="#git-切换本地帐号" class="headerlink" title="git 切换本地帐号"></a>git 切换本地帐号</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> user.name wiidede</span><br><span class="line">git config --<span class="built_in">local</span> user.email wiixdede@gmail.com</span><br></pre></td></tr></table></figure>]]></content>
