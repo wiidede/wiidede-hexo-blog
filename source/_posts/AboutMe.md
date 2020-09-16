@@ -1,6 +1,6 @@
 ---
 title: 关于我
-date: 2020-09-15 ‏‎10:02:01
+date: 2020-09-15 10:02:01
 tags: ['网站', 'wiidede']
 categories: 网站
 id: thinkingAboutRSS

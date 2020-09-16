@@ -1,6 +1,6 @@
 ---
 title: 关于RSS的一些想法
-date: 2020-09-15 ‏‎10:59:52
+date: 2020-09-15 10:59:52
 tags: ['网站', 'RSS']
 categories: 网站
 id: thinkingAboutRSS
