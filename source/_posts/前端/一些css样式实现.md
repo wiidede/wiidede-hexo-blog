@@ -1,6 +1,6 @@
 ---
 title: 整理一些css样式
-date: 2020-09-10 ‏‎16:54:31
+date: 2020-09-10 16：54：31
 tags: ['前端', 'css']
 categories: 前端
 id: several-css-style
@@ -22,4 +22,13 @@ background: linear-gradient(360deg, #97E9FF 0%, #FFFFFF 100%);
 ```css
 text-shadow: 0 0 12px rgba(24, 230, 255, 0.63);
 ```
+
+### 适应多种情况的自动换行
+
+```css
+word-break: keep-all;
+word-wrap: break-word;
+white-space: pre-wrap;
+```
+
 
