@@ -107,6 +107,9 @@
 
 <h3 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: 0 0 12<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(24, 230, 255, 0<span class="selector-class">.63</span>);</span><br></pre></td></tr></table></figure>
 
+<h3 id="适应多种情况的自动换行"><a href="#适应多种情况的自动换行" class="headerlink" title="适应多种情况的自动换行"></a>适应多种情况的自动换行</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">word-break</span>: <span class="selector-tag">keep-all</span>;</span><br><span class="line"><span class="selector-tag">word-wrap</span>: <span class="selector-tag">break-word</span>;</span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">pre-wrap</span>;</span><br></pre></td></tr></table></figure>
+
+
 ]]></content>
       <categories>
         <category>前端</category>
