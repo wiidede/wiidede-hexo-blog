@@ -5,7 +5,8 @@
     <url>/AboutMe/</url>
     <content><![CDATA[<h2 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h2><p>出生：1999年</p>
 <p>专业：物联网工程</p>
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><p>大学：家庭服务机器人项目</p>
+<p>酷安ID：DD王</p>
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><p>大学：家庭服务机器人项目（ROS、深度学习）</p>
 <p>某监控公司：实习中，前端</p>
 ]]></content>
       <categories>
@@ -109,6 +110,7 @@
 
 <h3 id="适应多种情况的自动换行"><a href="#适应多种情况的自动换行" class="headerlink" title="适应多种情况的自动换行"></a>适应多种情况的自动换行</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">word-break</span>: <span class="selector-tag">keep-all</span>;</span><br><span class="line"><span class="selector-tag">word-wrap</span>: <span class="selector-tag">break-word</span>;</span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">pre-wrap</span>;</span><br></pre></td></tr></table></figure>
 
+<h3 id="小天才的margin呢"><a href="#小天才的margin呢" class="headerlink" title="小天才的margin呢"></a>小天才的margin呢</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.iconfont</span> + <span class="selector-class">.iconfont</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
