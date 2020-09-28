@@ -31,4 +31,11 @@ word-wrap: break-word;
 white-space: pre-wrap;
 ```
 
+### 小天才的margin呢
+
+```css
+.iconfont + .iconfont {
+    margin-left: 10px;
+}
+```
 
