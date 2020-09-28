@@ -15,6 +15,8 @@ reward: true
 
 酷安ID：DD王
 
+github: [wiidede](http://github.com/wiidede)
+
 ## 经历
 
 大学：家庭服务机器人项目（ROS、深度学习）
