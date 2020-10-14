@@ -3,7 +3,7 @@ title: git 本地切换帐号
 date: 2020-09-15 12:11:52
 tags: ['git']
 categories: 其他
-id: gitChangeLocalAccount
+id: git-change-local-account
 reward: true
 ---
 

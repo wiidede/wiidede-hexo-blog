@@ -3,7 +3,7 @@ title: 关于RSS的一些想法
 date: 2020-09-15 10:59:52
 tags: ['网站', 'RSS']
 categories: 网站
-id: thinkingAboutRSS
+id: thinking-about-rss
 reward: true
 ---
 
@@ -21,3 +21,4 @@ hexo插件生成 [本网站RSS](/atom.xml)
 
 # 源管理/推荐
 
+害，现在能有啥简单的阅读呢

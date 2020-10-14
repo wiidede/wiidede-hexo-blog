@@ -3,7 +3,7 @@ title: 正则表达式 向前最短匹配
 date: 2020-09-16 13:44:16
 tags: ['正则表达式', 'Python']
 categories: Python
-id: RegAboutMatchTheForward
+id: reg-about-match-the-forward
 reward: true
 ---
 
@@ -25,4 +25,4 @@ reg = r'```[^```]+' + clipContent + r'.*?```'
 
 我们要从 `clipContent` 向前找到第一次出现 ```` ` ，所以思路应该是向前找到第一个你所想要的内容
 
-[这里](/Python/监听剪贴板%20在文字中匹配相应的内容%20适用于题库/)有一个实际案例
+[这里](/Python/listen-the-clipboard-and-match/)有一个实际案例

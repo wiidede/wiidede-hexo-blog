@@ -3,7 +3,7 @@ title: 监听剪贴板 在文字中匹配相应的内容 适用于题库
 date: 2020-09-16 13:56:27
 tags: ['正则表达式', 'Python', '监听剪贴板']
 categories: Python
-id: ListenTheClipboardAndMatch
+id: listen-the-clipboard-and-match
 reward: true带
 ---
 
@@ -44,4 +44,4 @@ if __name__ == '__main__':
     main()
 ```
 
-其中关于正则表示的原理可以参考[这里](/Python/正则表达式%20向前最短匹配/)
+其中关于正则表示的原理可以参考[这里](/Python/reg-about-match-the-forward/)
