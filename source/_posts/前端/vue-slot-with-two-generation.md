@@ -13,7 +13,7 @@ reward: true
 
 比较特殊的地方在于这个插槽的名字是动态的，而且可能不止一个（v-for根据数据循环判断有多少插槽）
 
-#### 孙子组件
+### 孙子组件
 
 ```vue
 <div v-for="(item,index) in config" :key=index>
