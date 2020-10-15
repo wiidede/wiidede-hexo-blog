@@ -73,6 +73,17 @@
       </tags>
   </entry>
   <entry>
+    <title>git 本地切换帐号</title>
+    <url>/%E5%85%B6%E4%BB%96/git-change-local-account/</url>
+    <content><![CDATA[<h2 id="git-切换本地帐号"><a href="#git-切换本地帐号" class="headerlink" title="git 切换本地帐号"></a>git 切换本地帐号</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> user.name wiidede</span><br><span class="line">git config --<span class="built_in">local</span> user.email wiixdede@gmail.com</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则表达式 向前最短匹配</title>
     <url>/Python/reg-about-match-the-forward/</url>
     <content><![CDATA[<h1 id="正则表达式-向前最短匹配"><a href="#正则表达式-向前最短匹配" class="headerlink" title="正则表达式 向前最短匹配"></a>正则表达式 向前最短匹配</h1><p>使用正则表达式  <code>.*?</code>  可以向后匹配最短的，那么如何向前匹配最短的呢</p>
@@ -94,17 +105,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git 本地切换帐号</title>
-    <url>/%E5%85%B6%E4%BB%96/git-change-local-account/</url>
-    <content><![CDATA[<h2 id="git-切换本地帐号"><a href="#git-切换本地帐号" class="headerlink" title="git 切换本地帐号"></a>git 切换本地帐号</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> user.name wiidede</span><br><span class="line">git config --<span class="built_in">local</span> user.email wiixdede@gmail.com</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>整理一些css样式</title>
     <url>/%E5%89%8D%E7%AB%AF/several-css-style/</url>
     <content><![CDATA[<h1 id="整理一些css样式"><a href="#整理一些css样式" class="headerlink" title="整理一些css样式"></a>整理一些css样式</h1><h3 id="渐变文字"><a href="#渐变文字" class="headerlink" title="渐变文字"></a>渐变文字</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">linear-gradient</span>(360<span class="selector-tag">deg</span>, <span class="selector-id">#97E9FF</span> 0%, <span class="selector-id">#FFFFFF</span> 100%);</span><br><span class="line"><span class="selector-tag">-webkit-background-clip</span>: <span class="selector-tag">text</span>;</span><br><span class="line"><span class="selector-tag">-webkit-text-fill-color</span>: <span class="selector-tag">transparent</span>;</span><br></pre></td></tr></table></figure>
@@ -113,7 +113,7 @@
 
 <h3 id="适应多种情况的自动换行"><a href="#适应多种情况的自动换行" class="headerlink" title="适应多种情况的自动换行"></a>适应多种情况的自动换行</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">word-break</span>: <span class="selector-tag">keep-all</span>;</span><br><span class="line"><span class="selector-tag">word-wrap</span>: <span class="selector-tag">break-word</span>;</span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">pre-wrap</span>;</span><br></pre></td></tr></table></figure>
 
-<h3 id="小天才的margin呢"><a href="#小天才的margin呢" class="headerlink" title="小天才的margin呢"></a>小天才的margin呢</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.iconfont</span> + <span class="selector-class">.iconfont</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="小天才的margin呢"><a href="#小天才的margin呢" class="headerlink" title="小天才的margin呢"></a>小天才的margin呢</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.iconfont</span> + <span class="selector-class">.iconfont</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 任意两个连续的 `iconfont` 类中后面一个添加 `margin-left` 属性 */</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -130,8 +130,7 @@
     <content><![CDATA[<p>总体的思路就是获取dom元素，根据dom元素的 <code>clientWidth</code> 与 <code>scrollWidth</code> 来判断是否溢出，我这里正好碰到v-for，所以需要动态绑定每一个元素的ref</p>
 <h3 id="template"><a href="#template" class="headerlink" title="template"></a>template</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div v-for&#x3D;&quot;item in items&quot; :key&#x3D;&quot;item.id&quot;&gt;</span><br><span class="line">    &lt;el-tooltip</span><br><span class="line">                :disabled&#x3D;&quot;isOverflow($refs[item.id])&quot;</span><br><span class="line">                :content&#x3D;&quot;&#96;$&#123;item.content&#125;&#96;&quot;</span><br><span class="line">                effect&#x3D;&quot;dark&quot;</span><br><span class="line">                placement&#x3D;&quot;top&quot;&gt;</span><br><span class="line">        &lt;span :ref&#x3D;&quot;item.id&quot;&gt;&#123;&#123; item.content &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;el-tooltip&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
-<p>处理函数 isOverflow</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">isOverflow(element) &#123;</span><br><span class="line">    <span class="keyword">return</span> element ? element[<span class="number">0</span>].clientWidth &gt;= element[<span class="number">0</span>].scrollWidth : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="处理函数-isOverflow"><a href="#处理函数-isOverflow" class="headerlink" title="处理函数 isOverflow"></a>处理函数 isOverflow</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">isOverflow(element) &#123;</span><br><span class="line">    <span class="keyword">return</span> element ? element[<span class="number">0</span>].clientWidth &gt;= element[<span class="number">0</span>].scrollWidth : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
