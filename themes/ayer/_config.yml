@@ -141,9 +141,9 @@ cnzz:
   url: https://s9.cnzz.com/z_stat.php?id=1278069914&web_id=1278069914
 
 # Google Analytics
-google_analytics: true
+google_analytics: 'UA-180671807-1'
 # 百度统计
-baidu_analytics: true
+baidu_analytics: ''
 
 # Mathjax数学公式
 mathjax: false
