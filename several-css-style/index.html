@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    vue隔代组件层层动态插槽并且附带数据 |  wiidede&#39;s blog 以及蕾の爱
+    整理一些css样式 |  wiidede&#39;s blog 以及蕾の爱
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -49,7 +49,7 @@
     <main class="content on">
       <section class="outer">
   <article
-        id="post-前端/vue-slot-with-two-generation"
+        id="post-前端/2020-09-10 整理一些css样式"
         class="article article-type-post"
         itemscope
         itemprop="blogPost"
@@ -60,7 +60,7 @@
       <header class="article-header">
          
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  vue隔代组件层层动态插槽并且附带数据
+  整理一些css样式
 </h1>
  
 
@@ -69,8 +69,8 @@
     
       <div class="article-meta">
         <div class="article-meta-timeAndCategory">
-          <a href="/%E5%89%8D%E7%AB%AF/vue-slot-with-two-generation/" class="article-date">
-  <time datetime="2020-10-14T15:57:28.000Z" itemprop="datePublished">2020-10-14</time>
+          <a href="/several-css-style/" class="article-date">
+  <time datetime="2020-09-10T16:54:31.000Z" itemprop="datePublished">2020-09-10</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">519</span>
+            <span class="post-count">98</span>
         </span>
     </span>
 
@@ -93,7 +93,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
@@ -114,18 +114,14 @@
       <div class="article-entry" itemprop="articleBody">
          
 
-         <h1 id="vue隔代组件层层动态插槽并且附带数据"><a href="#vue隔代组件层层动态插槽并且附带数据" class="headerlink" title="vue隔代组件层层动态插槽并且附带数据"></a>vue隔代组件层层动态插槽并且附带数据</h1><p>最近写代码，孙子组件有插槽，想要在爷爷组件里面往孙子组件里面插东西，发现插不进去，于是在父组件也建立了一个插槽。</p>
-<p>比较特殊的地方在于这个插槽的名字是动态的，而且可能不止一个（v-for根据数据循环判断有多少插槽）</p>
-<h3 id="孙子组件"><a href="#孙子组件" class="headerlink" title="孙子组件"></a>孙子组件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div v-for&#x3D;&quot;(item,index) in config&quot; :key&#x3D;index&gt;</span><br><span class="line">	&lt;span v-if&#x3D;&quot;item.custom&quot;&gt;</span><br><span class="line">        &lt;slot :name&#x3D;&quot;item.custom&quot; :value&#x3D;&quot;item.key&quot; :index&#x3D;&quot;index&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">	&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+         <h1 id="整理一些css样式"><a href="#整理一些css样式" class="headerlink" title="整理一些css样式"></a>整理一些css样式</h1><h3 id="渐变文字"><a href="#渐变文字" class="headerlink" title="渐变文字"></a>渐变文字</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">linear-gradient</span>(360<span class="selector-tag">deg</span>, <span class="selector-id">#97E9FF</span> 0%, <span class="selector-id">#FFFFFF</span> 100%);</span><br><span class="line"><span class="selector-tag">-webkit-background-clip</span>: <span class="selector-tag">text</span>;</span><br><span class="line"><span class="selector-tag">-webkit-text-fill-color</span>: <span class="selector-tag">transparent</span>;</span><br></pre></td></tr></table></figure>
 
-<p>可以看到，孙子组件的具名插槽的名字是动态的，其实也就是由爷爷组件提供的</p>
-<h3 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template v-for&#x3D;&quot;item in config&quot; v-slot:[item]&#x3D;&quot;value&quot;&gt;</span><br><span class="line">	&lt;slot :name&#x3D;&quot;item&quot; :value&#x3D;&quot;value.value&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: 0 0 12<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(24, 230, 255, 0<span class="selector-class">.63</span>);</span><br></pre></td></tr></table></figure>
 
-<p>父组件是一个桥梁，根据数据得到相应需要有的插槽数来创建模板插入孙子组件，由于孙子组件的插槽名是动态的，所以，这里使用v-slot指令，插槽名为item对应的值，同时附带孙子组件的value值。</p>
-<p>而模板里面又是一个插槽供爷爷组件进行插入，名字依旧是动态的item的值，附带从孙子组件得到的value</p>
-<h3 id="爷爷组件"><a href="#爷爷组件" class="headerlink" title="爷爷组件"></a>爷爷组件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template v-slot:slot-name-one&#x3D;&quot;value&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;slot-name-one&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;value&quot;&gt;&#123;&#123; value.value &#125;&#125;&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;value&quot;&gt;&#123;&#123; value.value &#125;&#125;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;template v-slot:slot-name-two&#x3D;&quot;value&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;slot-name-two&quot;&gt;</span><br><span class="line">        &lt;div :class&#x3D;&quot;value.value &#x3D;&#x3D;&#x3D; &#39;a&#39; ? &#39;a&#39; : &#39;other&#39;&quot;&gt;&#123;&#123; value.value &#125;&#125;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="适应多种情况的自动换行"><a href="#适应多种情况的自动换行" class="headerlink" title="适应多种情况的自动换行"></a>适应多种情况的自动换行</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">word-break</span>: <span class="selector-tag">keep-all</span>;</span><br><span class="line"><span class="selector-tag">word-wrap</span>: <span class="selector-tag">break-word</span>;</span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">pre-wrap</span>;</span><br></pre></td></tr></table></figure>
 
-<p>这样爷爷组件就可以尽情的往孙子组件插入了</p>
+<h3 id="小天才的margin呢"><a href="#小天才的margin呢" class="headerlink" title="小天才的margin呢"></a>小天才的margin呢</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.iconfont</span> + <span class="selector-class">.iconfont</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 任意两个连续的 `iconfont` 类中后面一个添加 `margin-left` 属性 */</span></span><br></pre></td></tr></table></figure>
+
 
         
         <!-- reward -->
@@ -197,14 +193,14 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wiidede.github.io/%E5%89%8D%E7%AB%AF/vue-slot-with-two-generation/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wiidede.github.io/several-css-style/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/slot/" rel="tag">slot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
 
     </footer>
   </div>
@@ -212,20 +208,15 @@
    
   <nav class="article-nav">
     
-      <a href="/%E5%89%8D%E7%AB%AF/vue-auto-show-tooltip/" class="article-nav-link">
+      <a href="/blog-todo-list/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            vue判断字符串是否溢出来显示弹窗
+            网站ToDo
           
         </div>
       </a>
     
-    
-      <a href="/Python/listen-the-clipboard-and-match/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">监听剪贴板 在文字中匹配相应的内容 适用于题库</div>
-      </a>
     
   </nav>
 
@@ -648,10 +639,6 @@
 
 
 <!-- CanvasBackground -->
-
-
-<script src="/js/dz.js"></script>
-
 
 
     
