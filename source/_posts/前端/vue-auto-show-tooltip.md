@@ -1,0 +1,33 @@
+---
+title: vue判断字符串是否溢出来显示弹窗
+date: 2020-10-14 ‏‎15:57:28
+tags: ['前端', 'vue', 'elementUI', 'tooltip']
+categories: 前端
+id: vue-auto-show-tooltip
+reward: true
+---
+
+总体的思路就是获取dom元素，根据dom元素的 `clientWidth` 与 `scrollWidth` 来判断是否溢出，我这里正好碰到v-for，所以需要动态绑定每一个元素的ref
+
+### template
+
+```vue
+<div v-for="item in items" :key="item.id">
+    <el-tooltip
+                :disabled="isOverflow($refs[item.id])"
+                :content="`${item.content}`"
+                effect="dark"
+                placement="top">
+        <span :ref="item.id">{{ item.content }}</span>
+    </el-tooltip>
+</div>
+```
+
+处理函数 isOverflow
+
+```javascript
+isOverflow(element) {
+    return element ? element[0].clientWidth >= element[0].scrollWidth : false;
+}
+```
+
