@@ -37,5 +37,6 @@ white-space: pre-wrap;
 .iconfont + .iconfont {
     margin-left: 10px;
 }
+/* 任意两个连续的 `iconfont` 类中后面一个添加 `margin-left` 属性 */
 ```
 
