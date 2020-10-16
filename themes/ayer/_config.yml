@@ -143,7 +143,7 @@ cnzz:
 # Google Analytics
 google_analytics: 'UA-180671807-1'
 # 百度统计
-baidu_analytics: '6be17a4e93a49f3badcb8ef809b6325a'
+baidu_analytics: '4e4c40beb140d0ab869c8fc2272fdc08'
 
 # Mathjax数学公式
 mathjax: false
