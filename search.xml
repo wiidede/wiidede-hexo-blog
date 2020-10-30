@@ -168,4 +168,41 @@
         <tag>tooltip</tag>
       </tags>
   </entry>
+  <entry>
+    <title>整理一些js写法</title>
+    <url>/several-js-grammar/</url>
+    <content><![CDATA[<h1 id="整理一些js写法"><a href="#整理一些js写法" class="headerlink" title="整理一些js写法"></a>整理一些js写法</h1><h3 id="从元素为对象的数组中提取出对象的某属性为x的快速写法，摘自vuex教程"><a href="#从元素为对象的数组中提取出对象的某属性为x的快速写法，摘自vuex教程" class="headerlink" title="从元素为对象的数组中提取出对象的某属性为x的快速写法，摘自vuex教程"></a>从元素为对象的数组中提取出对象的某属性为x的快速写法，摘自vuex教程</h3><p>说到底是Array的find()、filter()方法</p>
+<p>find返回的是数组里第一个符合条件的选项，</p>
+<p>filter返回的是数组里符合条件的选项集合，是一个数组</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    todos: [</span><br><span class="line">      &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">text</span>: <span class="string">&#x27;...&#x27;</span>, <span class="attr">done</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">text</span>: <span class="string">&#x27;...&#x27;</span>, <span class="attr">done</span>: <span class="literal">false</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  getters: &#123;</span><br><span class="line">    doneTodos: <span class="function"><span class="params">state</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> state.todos.filter(<span class="function"><span class="params">todo</span> =&gt;</span> todo.done)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">getters: &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  getTodoById: <span class="function">(<span class="params">state</span>) =&gt;</span> <span class="function">(<span class="params">id</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> state.todos.find(<span class="function"><span class="params">todo</span> =&gt;</span> todo.id === id)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>filter 其他用法</p>
+<p>去掉数组中值为index的项目</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">this</span>.arr = <span class="built_in">this</span>.arr.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> item !== index);</span><br></pre></td></tr></table></figure>
+
+<p>判断数组中有没有值为index的项目</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">this</span>.arr.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> item === index).length !== <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>反转对象的key和value的值，如果直接将对象传进去，将会改变原有对象，建议传{…obj}进去</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">reverseKV(obj) &#123;</span><br><span class="line"> <span class="built_in">Object</span>.keys(obj).forEach(<span class="function"><span class="params">k</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> value = obj[k];</span><br><span class="line">  obj[value] = k;</span><br><span class="line">  <span class="keyword">delete</span> obj[k];</span><br><span class="line"> &#125;);</span><br><span class="line"> <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>查找数组中，对象某个属性值为val的索引(index)</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">findElem(arrayToSearch, attr, val) &#123;</span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arrayToSearch.length; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (arrayToSearch[i][attr] === val) &#123;</span><br><span class="line">   <span class="keyword">return</span> i;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>判断页面上的字符是否溢出</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">isOverflow(element) &#123;</span><br><span class="line"> <span class="keyword">return</span> element ? element[<span class="number">0</span>].offsetWidth &gt;= element[<span class="number">0</span>].scrollWidth : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间格式化</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">timeFormat(value) &#123;</span><br><span class="line"> <span class="keyword">return</span> value === <span class="number">0</span> ? <span class="string">&#x27;-&#x27;</span> : moment(value).format(<span class="string">&#x27;YYYY-MM-DD HH:mm:ss&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>事件中的offsetX，offsetY，只有chrome能算准，火狐firefox会时常为0，这时候就需要换一种算法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//firefox event.offsetX 时常为0</span></span><br><span class="line"><span class="comment">// let ox = event.offsetX; //</span></span><br><span class="line"><span class="comment">// let oy = event.offsetY;</span></span><br><span class="line"><span class="keyword">let</span> srcObj = event.target || event.srcElement;</span><br><span class="line"><span class="keyword">let</span> ox = event.offsetX || (event.clientX - srcObj.getBoundingClientRect().left);</span><br><span class="line"><span class="keyword">let</span> oy = event.offsetY || (event.clientY - srcObj.getBoundingClientRect().top);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
 </search>
