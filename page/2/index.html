@@ -14,7 +14,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    前端 |  wiidede&#39;s blog 以及蕾の爱
+     wiidede&#39;s blog 以及蕾の爱
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -71,167 +71,172 @@ var _hmt = _hmt || [];
     
       
     <main class="content on">
-      <section class="outer">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/coverlian.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">wiidede&#39;s blog</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['愿你眼里有光，心里有爱', '', '蕾の憧憬，是距离了解最遥远的一种感情'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #e6e6e650;
+        border-radius: 2px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
   
   <article class="articles">
     
     
-    <h1 class="page-type-title">前端</h1>
     
     
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/several-js-grammar/" class="archive-article-date">
-  <time datetime="2020-10-22T09:57:27.000Z" itemprop="datePublished">10/22</time>
-</a>
-       
+    <article
+        id="post-前端/2020-09-10 整理一些css样式"
+        class="article article-type-post"
+        itemscope
+        itemprop="blogPost"
+        data-scroll-reveal
+>
+  <div class="article-inner">
+    
+      <header class="article-header">
+         
 <h2 itemprop="name">
-  <a class="archive-article-title" href="/several-js-grammar/"
-    >整理一些js写法</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/several-vue-grammar/" class="archive-article-date">
-  <time datetime="2020-10-16T14:23:06.000Z" itemprop="datePublished">10/16</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/several-vue-grammar/"
-    >整理一些vue写法</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/vue-auto-show-tooltip/" class="archive-article-date">
-  <time datetime="2020-10-15T16:37:11.000Z" itemprop="datePublished">10/15</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/vue-auto-show-tooltip/"
-    >vue判断字符串是否溢出来显示弹窗</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/vue-slot-with-two-generation/" class="archive-article-date">
-  <time datetime="2020-10-14T15:57:28.000Z" itemprop="datePublished">10/14</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/vue-slot-with-two-generation/"
-    >vue隔代组件层层动态插槽并且附带数据</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/several-css-style/" class="archive-article-date">
-  <time datetime="2020-09-10T16:54:31.000Z" itemprop="datePublished">09/10</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/several-css-style/"
+  <a class="article-title" href="/several-css-style/"
     >整理一些css样式</a> 
 </h2>
  
 
-    </header>
+      </header>
     
-      
+    
+      <div class="article-meta">
+        <div class="article-meta-timeAndCategory">
+          <a href="/several-css-style/" class="article-date">
+  <time datetime="2020-09-10T16:54:31.000Z" itemprop="datePublished">2020-09-10</time>
+</a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
   </div>
 
+        </div>
+        <div class="article-meta-wordCount">
+           
+          
+        </div>
+      </div>
     
     
-  </div>
-</article>
+    
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
       
       
-    </div>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
   </div>
+
   
+   
+
+  
+  
+  
+</article>
+
+    
+  </article>
   
 
   
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+  
 </section>
+</div>
+
       <footer class="footer">
   <div class="outer">
     <ul>
