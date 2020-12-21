@@ -98,7 +98,7 @@ ga('send', 'pageview');
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">724</span>
+            <span class="post-count">732</span>
         </span>
     </span>
 
@@ -144,6 +144,7 @@ ga('send', 'pageview');
 
 <h2 id="判断页面上的字符是否溢出"><a href="#判断页面上的字符是否溢出" class="headerlink" title="判断页面上的字符是否溢出"></a>判断页面上的字符是否溢出</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">isOverflow(element) &#123;</span><br><span class="line"> <span class="keyword">return</span> element ? element[<span class="number">0</span>].offsetWidth &gt;= element[<span class="number">0</span>].scrollWidth : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>集成为一个<a href="/several-vue-grammar/#%E6%BA%A2%E5%87%BA%E8%87%AA%E5%8A%A8%E6%98%BE%E7%A4%BAtooltip%E7%9A%84%E7%BB%84%E4%BB%B6">vue组件</a></p>
 <h2 id="时间格式化"><a href="#时间格式化" class="headerlink" title="时间格式化"></a>时间格式化</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">timeFormat(value) &#123;</span><br><span class="line"> <span class="keyword">return</span> value === <span class="number">0</span> ? <span class="string">&#x27;-&#x27;</span> : moment(value).format(<span class="string">&#x27;YYYY-MM-DD HH:mm:ss&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="事件中的offsetX，offsetY，只有chrome能算准，火狐firefox会时常为0，这时候就需要换一种算法"><a href="#事件中的offsetX，offsetY，只有chrome能算准，火狐firefox会时常为0，这时候就需要换一种算法" class="headerlink" title="事件中的offsetX，offsetY，只有chrome能算准，火狐firefox会时常为0，这时候就需要换一种算法"></a>事件中的offsetX，offsetY，只有chrome能算准，火狐firefox会时常为0，这时候就需要换一种算法</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//firefox event.offsetX 时常为0</span></span><br><span class="line"><span class="comment">// let ox = event.offsetX; //</span></span><br><span class="line"><span class="comment">// let oy = event.offsetY;</span></span><br><span class="line"><span class="keyword">let</span> srcObj = event.target || event.srcElement;</span><br><span class="line"><span class="keyword">let</span> ox = event.offsetX || (event.clientX - srcObj.getBoundingClientRect().left);</span><br><span class="line"><span class="keyword">let</span> oy = event.offsetY || (event.clientY - srcObj.getBoundingClientRect().top);</span><br></pre></td></tr></table></figure>
