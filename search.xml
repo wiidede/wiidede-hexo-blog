@@ -224,6 +224,29 @@
       </tags>
   </entry>
   <entry>
+    <title>ElementUI timePicker 增加此刻按钮 引发的dom操作的学习</title>
+    <url>/element-ui-time-picker-add-now-button/</url>
+    <content><![CDATA[<h1 id="ElementUI-timePicker-增加此刻按钮-引发的dom操作的学习"><a href="#ElementUI-timePicker-增加此刻按钮-引发的dom操作的学习" class="headerlink" title="ElementUI timePicker 增加此刻按钮 引发的dom操作的学习"></a>ElementUI timePicker 增加此刻按钮 引发的dom操作的学习</h1><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>获取timePicker弹出框的footer元素</p>
+<p>替换原来的取消按钮</p>
+<p>&lt;template&gt;</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-time-picker</span></span></span><br><span class="line"><span class="tag">        @<span class="attr">click.native</span>=<span class="string">&quot;handleClickTime&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">v-model</span>=<span class="string">&quot;value&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">:picker-options</span>=<span class="string">&quot;&#123;selectableRange: &#x27;18:00:00 - 20:00:00&#x27;&#125;&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">placeholder</span>=<span class="string">&quot;请选择时间&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-time-picker</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&lt;script&gt;</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">handleClickTime() &#123;</span><br><span class="line">  <span class="keyword">let</span> footer = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.el-time-panel__footer&#x27;</span>);</span><br><span class="line">  <span class="keyword">let</span> element = <span class="built_in">document</span>.createElement(<span class="string">&#x27;input&#x27;</span>);</span><br><span class="line">  element.type = <span class="string">&#x27;button&#x27;</span>;</span><br><span class="line">  element.value = <span class="string">&#x27;此刻&#x27;</span>;</span><br><span class="line">  element.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;点击此刻按钮&#x27;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  footer.appendChild(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="引发的思考"><a href="#引发的思考" class="headerlink" title="引发的思考"></a>引发的思考</h2><p>一开始看到 element UI 不支持 slot ，就开始束手无措，甚至想驳回请求，后来请教了一下组长，直接用 dom 操作加上了 button</p>
+<p>所以还是要加强对 JavaScript 的学习</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>vue</tag>
+        <tag>ElementUI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一言</title>
     <url>/one-sentence/</url>
     <content><![CDATA[<h1 id="一言"><a href="#一言" class="headerlink" title="一言"></a>一言</h1><blockquote>
