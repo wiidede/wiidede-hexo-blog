@@ -1,7 +1,7 @@
 ---
 title: ElementUI timePicker 增加此刻按钮 引发的dom操作的学习
 date: 2021-04-06 15:12:43
-tags: ['前端', 'vue', 'ElementUI']
+tags: ['前端', 'Vue', 'ElementUI']
 categories: 前端
 id: element-ui-time-picker-add-now-button
 reward: true
