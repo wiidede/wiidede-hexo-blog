@@ -98,7 +98,7 @@ ga('send', 'pageview');
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">162</span>
+            <span class="post-count">343</span>
         </span>
     </span>
 
@@ -132,6 +132,10 @@ ga('send', 'pageview');
 <h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div v-for&#x3D;&quot;item in items&quot; :key&#x3D;&quot;item.id&quot;&gt;</span><br><span class="line">    &lt;el-tooltip</span><br><span class="line">                :disabled&#x3D;&quot;isOverflow($refs[item.id])&quot;</span><br><span class="line">                :content&#x3D;&quot;&#96;$&#123;item.content&#125;&#96;&quot;</span><br><span class="line">                effect&#x3D;&quot;dark&quot;</span><br><span class="line">                placement&#x3D;&quot;top&quot;&gt;</span><br><span class="line">        &lt;span :ref&#x3D;&quot;item.id&quot;&gt;&#123;&#123; item.content &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;el-tooltip&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="处理函数-isOverflow"><a href="#处理函数-isOverflow" class="headerlink" title="处理函数 isOverflow"></a>处理函数 isOverflow</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">isOverflow(element) &#123;</span><br><span class="line">    <span class="keyword">return</span> element ? element[<span class="number">0</span>].clientWidth &gt;= element[<span class="number">0</span>].scrollWidth : <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="整理成组件"><a href="#整理成组件" class="headerlink" title="整理成组件"></a>整理成组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-tooltip</span><br><span class="line">          :disabled&#x3D;&quot;disabled&quot;</span><br><span class="line">          effect&#x3D;&quot;dark&quot;</span><br><span class="line">          :content&#x3D;&quot;tooltipContent || content&quot;</span><br><span class="line">          placement&#x3D;&quot;top&quot;</span><br><span class="line">          :enterable&#x3D;&quot;false&quot;&gt;</span><br><span class="line">    &lt;div ref&#x3D;&quot;overflowTooltipContent&quot;</span><br><span class="line">         :class&#x3D;&quot;className&quot; class&#x3D;&quot;overflow-content&quot; @mouseover&#x3D;&quot;isOverflow&quot;&gt;</span><br><span class="line">      &#123;&#123; content &#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;el-tooltip&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line"> name: &#39;overflow-tooltip&#39;,</span><br><span class="line"> props: &#123;</span><br><span class="line">  className: &#123;</span><br><span class="line">   type: String,</span><br><span class="line">   default: &#39;&#39;</span><br><span class="line">  &#125;,</span><br><span class="line">  content: &#123;</span><br><span class="line">   type: String,</span><br><span class="line">   default: &#39;&#39;</span><br><span class="line">  &#125;,</span><br><span class="line">  tooltipContent: &#123;</span><br><span class="line">   type: String,</span><br><span class="line">   default: &#39;&#39;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;,</span><br><span class="line"> data() &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">   disabled: true</span><br><span class="line">  &#125;;</span><br><span class="line"> &#125;,</span><br><span class="line"> methods: &#123;</span><br><span class="line">  isOverflow() &#123;</span><br><span class="line">   if (this.$refs.overflowTooltipContent) &#123;</span><br><span class="line">    this.disabled &#x3D; this.$refs.overflowTooltipContent.offsetWidth &gt;&#x3D; this.$refs.overflowTooltipContent.scrollWidth;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;scss&quot; scoped&gt;</span><br><span class="line">.overflow-content &#123;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">  white-space: nowrap;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+
 
 
         
@@ -383,6 +387,18 @@ ga('send', 'pageview');
     
     <li class="nav-item">
       <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/several-js-grammar">JS合集</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/several-css-style">CSS合集</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/vue">vue组件</a>
     </li>
     
     <li class="nav-item">
