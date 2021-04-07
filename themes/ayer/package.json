@@ -27,7 +27,7 @@
   "homepage": "https://shen-yu.gitee.io/",
   "devDependencies": {
     "autoprefixer": "^9.8.6",
-    "parcel-bundler": "^1.12.4",
+    "parcel-bundler": "^1.12.5",
     "parcel-plugin-bundle-visualiser": "^1.2.0",
     "postcss-modules": "^1.5.0"
   },
