@@ -14,7 +14,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    正则表达式 向前最短匹配 |  wiidede&#39;s blog 以及蕾の爱
+    阿里云学习笔记 |  wiidede&#39;s blog 以及蕾の爱
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -63,7 +63,7 @@ ga('send', 'pageview');
     <main class="content on">
       <section class="outer">
   <article
-        id="post-Python/2020-09-16 正则表达式 向前最短匹配"
+        id="post-其他/2020-01-11 阿里云学习笔记"
         class="article article-type-post"
         itemscope
         itemprop="blogPost"
@@ -74,7 +74,7 @@ ga('send', 'pageview');
       <header class="article-header">
          
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  正则表达式 向前最短匹配
+  阿里云学习笔记
 </h1>
  
 
@@ -83,11 +83,11 @@ ga('send', 'pageview');
     
       <div class="article-meta">
         <div class="article-meta-timeAndCategory">
-          <a href="/reg-about-match-the-forward/" class="article-date">
-  <time datetime="2020-09-16T13:44:16.000Z" itemprop="datePublished">2020-09-16</time>
+          <a href="/aliyun-note/" class="article-date">
+  <time datetime="2020-01-11T16:09:31.000Z" itemprop="datePublished">2020-01-11</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
+    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
   </div>
 
         </div>
@@ -98,7 +98,7 @@ ga('send', 'pageview');
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">187</span>
+            <span class="post-count">513</span>
         </span>
     </span>
 
@@ -107,7 +107,7 @@ ga('send', 'pageview');
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -128,15 +128,48 @@ ga('send', 'pageview');
       <div class="article-entry" itemprop="articleBody">
          
 
-         <h1 id="正则表达式-向前最短匹配"><a href="#正则表达式-向前最短匹配" class="headerlink" title="正则表达式 向前最短匹配"></a>正则表达式 向前最短匹配</h1><p>使用正则表达式  <code>.*?</code>  可以向后匹配最短的，那么如何向前匹配最短的呢</p>
-<p>向前的不再能使用 <code>.*?</code> ，因为它会从第一个字母向后找，直到有匹配的，也就相当于找了一个最长的匹配</p>
-<p>所以这时候应该换一种思路</p>
-<p>使用 <code>a[^a]+</code> 来匹配，也就是说要匹配的字符串前面不能有a，那就是最短的匹配</p>
-<p>我们来看一个 Python 写的例子：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">reg = <span class="string">r&#x27;```[^```]+&#x27;</span> + clipContent + <span class="string">r&#x27;.*?```&#x27;</span></span><br></pre></td></tr></table></figure>
+         <h1 id="阿里云学习笔记-很久之前的尝试"><a href="#阿里云学习笔记-很久之前的尝试" class="headerlink" title="阿里云学习笔记(很久之前的尝试)"></a>阿里云学习笔记(很久之前的尝试)</h1><h2 id="购买服务器"><a href="#购买服务器" class="headerlink" title="购买服务器"></a>购买服务器</h2><p>选择套餐（注册免费试用）</p>
+<p>ip地址：xx.xx.xx.xx</p>
+<p>选择了ubuntu14.04（免费试用没有更高的版本）</p>
+<h2 id="创建桌面"><a href="#创建桌面" class="headerlink" title="创建桌面"></a>创建桌面</h2><p>通过VNC连接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get upgrade</span><br><span class="line">apt-get install ubuntu-desktop</span><br></pre></td></tr></table></figure>
 
-<p>我们要从 <code>clipContent</code> 向前找到第一次出现 ```` ` ，所以思路应该是向前找到第一个你所想要的内容</p>
-<p><a href="/listen-the-clipboard-and-match">这里</a>有一个实际案例</p>
+<p>修改两个配置文件可以使用root登录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line">[<span class="string">Seat:*</span>]</span><br><span class="line"><span class="string">user-session=ubuntu</span></span><br><span class="line"><span class="string">greeter-show-manual-login=true</span></span><br><span class="line"><span class="string">allow-guest=false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /root/.profile</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ~/.profile: executed by Bourne-compatible login shells.</span></span><br><span class="line"><span class="string">if</span> [ <span class="string">&quot;$BASH&quot;</span> ]<span class="string">;</span> <span class="string">then</span></span><br><span class="line">  <span class="string">if</span> [ <span class="string">-f</span> <span class="string">~/.bashrc</span> ]<span class="string">;</span> <span class="string">then</span></span><br><span class="line">    <span class="string">.</span> <span class="string">~/.bashrc</span></span><br><span class="line">  <span class="string">fi</span></span><br><span class="line"><span class="string">fi</span></span><br><span class="line"><span class="string">tty</span> <span class="string">-s</span> <span class="string">&amp;&amp;</span> <span class="string">mesg</span> <span class="string">n</span> <span class="string">||</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="搭建ftp传输文件"><a href="#搭建ftp传输文件" class="headerlink" title="搭建ftp传输文件"></a>搭建ftp传输文件</h2><h3 id="失败（无法匿名登录，本地测试通过，远程无法连接）"><a href="#失败（无法匿名登录，本地测试通过，远程无法连接）" class="headerlink" title="失败（无法匿名登录，本地测试通过，远程无法连接）"></a>失败（无法匿名登录，本地测试通过，远程无法连接）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建匿名上传目录</span></span><br><span class="line">mkdir ~/ftp</span><br><span class="line"><span class="built_in">cd</span> ~/ftp</span><br><span class="line">mkdir anonymous</span><br><span class="line">chomd 777 anonymous</span><br><span class="line"><span class="comment"># 安装vsftpd</span></span><br><span class="line">sudo apt-get install vsftpd</span><br><span class="line">sudo vi /etc/vsftpd.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 修改vsftpd.conf</span><br><span class="line">anonymous_enable&#x3D;YES</span><br><span class="line">anon_root&#x3D;&#x2F;root&#x2F;ftp</span><br><span class="line">no_anon_password&#x3D;YES</span><br><span class="line">write_enable&#x3D;YES</span><br><span class="line">anon_upload_enable&#x3D;YES</span><br><span class="line">anon_mkdir_write_enable&#x3D;YES</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 重启服务</span></span><br><span class="line">service vsftpd restart</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 测试</span></span><br><span class="line">ftp 127.0.0.1</span><br><span class="line">anonymous</span><br></pre></td></tr></table></figure>
+
+<p>开放20/21端口（ftp使用的端口）</p>
+<h3 id="第二次尝试（创建用户）（sftp）-成功"><a href="#第二次尝试（创建用户）（sftp）-成功" class="headerlink" title="第二次尝试（创建用户）（sftp）(成功)"></a>第二次尝试（创建用户）（sftp）(成功)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install vsftpd</span><br><span class="line">mkdir /home/uftp</span><br><span class="line">useradd -d /home/uftp -s /bin/bash uftp </span><br><span class="line">passwd uftp</span><br><span class="line">chown uftp:uftp /home/uftp</span><br><span class="line">vi /etc/vsftpd.user_allowlist</span><br><span class="line"><span class="comment"># 加入uftp(直接添加4个字)</span></span><br><span class="line">vi /etc/vsftpd.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">write_enable=YES</span></span><br><span class="line"><span class="string">userlist_file=/etc/vsftpd.user_allowlist</span></span><br><span class="line"><span class="string">userlist_enable=YES</span></span><br><span class="line"><span class="string">userlist_deny=NO</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 重启服务</span></span><br><span class="line">service vsftpd restart</span><br><span class="line"><span class="comment">#用21端口 uftp 123456 主动 登陆</span></span><br></pre></td></tr></table></figure>
+
+<p>关闭20/21端口 sftp使用22端口，同时22端口通常用于ssh连接</p>
+<h2 id="展示markdown文件给别人看（简单的网页）"><a href="#展示markdown文件给别人看（简单的网页）" class="headerlink" title="展示markdown文件给别人看（简单的网页）"></a>展示markdown文件给别人看（简单的网页）</h2><p><a target="_blank" rel="noopener" href="https://github.com/wangchaoeric87/markdown">https://github.com/wangchaoeric87/markdown</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> render_template</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Markup</span><br><span class="line"><span class="keyword">import</span> markdown</span><br><span class="line"></span><br><span class="line">app=Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/alinote&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>():</span></span><br><span class="line">	content = md2html(<span class="string">&#x27;/home/uftp/note/aliCloud-note.md&#x27;</span>)</span><br><span class="line">	<span class="keyword">return</span> render_template(<span class="string">&#x27;index.html&#x27;</span>,**locals())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">md2html</span>(<span class="params">filename</span>):</span></span><br><span class="line">	</span><br><span class="line">	exts = [<span class="string">&#x27;markdown.extensions.extra&#x27;</span>, <span class="string">&#x27;markdown.extensions.codehilite&#x27;</span>,<span class="string">&#x27;markdown.extensions.tables&#x27;</span>,<span class="string">&#x27;markdown.extensions.toc&#x27;</span>]</span><br><span class="line">	mdcontent = <span class="string">&quot;&quot;</span></span><br><span class="line">	<span class="keyword">with</span> open(filename,<span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">		mdcontent = f.read()</span><br><span class="line">		<span class="keyword">pass</span>	</span><br><span class="line">	html = markdown.markdown(mdcontent,extensions=exts)</span><br><span class="line">	content = Markup(html)</span><br><span class="line">	<span class="keyword">return</span> content</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">	app.debug = <span class="literal">True</span></span><br><span class="line">	app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>,port = <span class="number">5000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>把 app.run() 中 host 参数改为0.0.0.0即可给所有人访问</p>
+<p>把 app.route() 的改成网页的路径 /alinote</p>
+<p>通过外网访问</p>
+<p><a target="_blank" rel="noopener" href="http://xx.xx.xx.xx:5000/alinote">http://xx.xx.xx.xx:5000/alinote</a></p>
+<p>CSS样式</p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css</a></p>
 
         
         <!-- reward -->
@@ -208,14 +241,14 @@ ga('send', 'pageview');
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wiidede.github.io/reg-about-match-the-forward/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wiidede.github.io/aliyun-note/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aliyun/" rel="tag">aliyun</a></li></ul>
 
     </footer>
   </div>
@@ -223,19 +256,19 @@ ga('send', 'pageview');
    
   <nav class="article-nav">
     
-      <a href="/listen-the-clipboard-and-match/" class="article-nav-link">
+      <a href="/deep-learning-note/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            监听剪贴板 在文字中匹配相应的内容 适用于题库
+            深度学习笔记
           
         </div>
       </a>
     
     
-      <a href="/mp3-player-note/" class="article-nav-link">
+      <a href="/warehousing-robot/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">大三实训 MP3 播放器 硬件</div>
+        <div class="article-nav-title">写给学姐瞎讲的机器人比赛相关</div>
       </a>
     
   </nav>

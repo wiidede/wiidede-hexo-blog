@@ -14,7 +14,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    categories |  wiidede&#39;s blog 以及蕾の爱
+    深度学习笔记 |  wiidede&#39;s blog 以及蕾の爱
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -62,12 +62,260 @@ ga('send', 'pageview');
       
     <main class="content on">
       <section class="outer">
-  
-    <h1 class="page-type-title">分类</h1>
-    <div class="categories-box">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a><span class="category-list-count">3</span></li></ul>
+  <article
+        id="post-其他/2020-04-03 深度学习笔记"
+        class="article article-type-post"
+        itemscope
+        itemprop="blogPost"
+        data-scroll-reveal
+>
+  <div class="article-inner">
+    
+      <header class="article-header">
+         
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  深度学习笔记
+</h1>
+ 
+
+      </header>
+    
+    
+      <div class="article-meta">
+        <div class="article-meta-timeAndCategory">
+          <a href="/deep-learning-note/" class="article-date">
+  <time datetime="2020-04-03T19:29:41.000Z" itemprop="datePublished">2020-04-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+  </div>
+
+        </div>
+        <div class="article-meta-wordCount">
+           
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">480</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+
+          
+        </div>
+      </div>
+    
+     
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+    
+      <div class="article-entry" itemprop="articleBody">
+         
+
+         <h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><h2 id="一个最基础的例子"><a href="#一个最基础的例子" class="headerlink" title="一个最基础的例子"></a>一个最基础的例子</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l0 = tf.keras.layers.Dense(units=<span class="number">1</span>, input_shape=[<span class="number">1</span>]) </span><br><span class="line">model = tf.keras.Sequential([l0])</span><br><span class="line">model.compile(loss=<span class="string">&#x27;mean_squared_error&#x27;</span>, optimizer=tf.keras.optimizers.Adam(<span class="number">0.1</span>))</span><br><span class="line">history = model.fit(celsius_q, fahrenheit_a, epochs=<span class="number">500</span>, verbose=<span class="literal">False</span>)</span><br><span class="line">model.predict([<span class="number">100.0</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="术语："><a href="#术语：" class="headerlink" title="术语："></a>术语：</h2><ul>
+<li><strong>特征：</strong>模型的输入</li>
+<li><strong>样本：</strong>用于训练流程的输入/输出对</li>
+<li><strong>标签：</strong>模型的输出</li>
+<li><strong>层级：</strong>神经网络中相互连接的节点集合。</li>
+<li><strong>模型：</strong>神经网络的表示法</li>
+<li><strong>密集全连接层 (FC)：</strong>一个层级中的每个节点都与上个层级中的每个节点相连。</li>
+<li><strong>权重和偏差：</strong>模型的内部变量</li>
+<li><strong>损失：</strong>期望输出和真实输出之间的差值</li>
+<li><strong>MSE：</strong>均方误差，一种损失函数，它会将一小部分很大的差值视作比大量很小的差值更糟糕。</li>
+<li><strong>梯度下降法：</strong>每次小幅调整内部变量，从而逐渐降低损失函数的算法。</li>
+<li><strong>优化器：</strong>梯度下降法的一种具体实现方法。（有很多算法。在这门课程中，我们将仅使用“Adam”优化器，它是 <em>ADAptive with Momentum</em> 的简称，并且被视为最佳优化器。）</li>
+<li><strong>学习速率：</strong>梯度下降过程中的损失改进“步长”。</li>
+<li><strong>批次：</strong>在训练神经网络的过程中使用的一组样本。</li>
+<li><strong>周期：</strong>完全经过整个训练数据集一轮</li>
+<li><strong>前向传播：</strong>根据输入计算输出值</li>
+<li><strong>反向传播：</strong>根据优化器算法计算内部变量的调整幅度，从输出层级开始，并往回计算每个层级，直到抵达输入层。</li>
+<li><strong>扁平化：</strong>将二维图像转换为一维向量的过程</li>
+<li><strong>ReLU：</strong>一种激活函数，使模型能够解决非线性问题</li>
+<li><strong>Softmax：</strong>一种函数，能够为每个潜在输出类别生成概率</li>
+<li><strong>分类：</strong>一种机器学习模型，用于区分两个或多个输出类别</li>
+</ul>
+
+        
+        <!-- reward -->
+        
+          <div id="reword-out">
+            <div id="reward-btn">
+              打赏
+            </div>
+          </div>
+        
+      </div>
+    
+
+    <!-- copyright -->
+    
+      <div class="declare">
+        <ul class="post-copyright">
+          <li>
+            <i class="ri-copyright-line"></i>
+            <strong>版权声明： </strong>
+            
+              本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+            
+          </li>
+        </ul>
+      </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wiidede.github.io/deep-learning-note/" alt="微信分享二维码">
     </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learing/" rel="tag">deep learing</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/several-css-style/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            整理一些css样式
+          
+        </div>
+      </a>
+    
+    
+      <a href="/aliyun-note/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">阿里云学习笔记</div>
+      </a>
+    
+  </nav>
+
+
   
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "kdLBgGeN6AO23LTQWDAqRttz-9Nh9j0Va",
+    app_key: "hWmkOGBqEpSlw81Gbqn4CSuF",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+
+  .vempty {
+    display: none !important;
+  }
+</style>
+
+
+  
+   
+  
+  
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -231,6 +479,23 @@ ga('send', 'pageview');
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: false,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
