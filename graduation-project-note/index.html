@@ -14,7 +14,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    其他 |  wiidede&#39;s blog 以及蕾の爱
+    毕业设计部署踩坑笔记 |  wiidede&#39;s blog 以及蕾の爱
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -62,252 +62,241 @@ ga('send', 'pageview');
       
     <main class="content on">
       <section class="outer">
-  
-  <article class="articles">
+  <article
+        id="post-其他/2021-04-26 毕业设计部署踩坑"
+        class="article article-type-post"
+        itemscope
+        itemprop="blogPost"
+        data-scroll-reveal
+>
+  <div class="article-inner">
+    
+      <header class="article-header">
+         
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  毕业设计部署踩坑笔记
+</h1>
+ 
+
+      </header>
     
     
-    <h1 class="page-type-title">其他</h1>
+      <div class="article-meta">
+        <div class="article-meta-timeAndCategory">
+          <a href="/graduation-project-note/" class="article-date">
+  <time datetime="2021-04-26T21:30:33.000Z" itemprop="datePublished">2021-04-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+  </div>
+
+        </div>
+        <div class="article-meta-wordCount">
+           
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">406</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">2 分钟</span>
+        </span>
+    </span>
+</div>
+
+          
+        </div>
+      </div>
+    
+     
+    <div class="tocbot"></div>
+
+
+
+
+
     
     
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2021" class="archive-year">2021</a>
+      <div class="article-entry" itemprop="articleBody">
+         
+
+         <h1 id="毕业设计部署踩坑笔记"><a href="#毕业设计部署踩坑笔记" class="headerlink" title="毕业设计部署踩坑笔记"></a>毕业设计部署踩坑笔记</h1><p>首先为什么要叫踩坑，主要还是之前从来没有正式的发布过</p>
+<p>其次就是最后想要的效果，就是用docker直接在服务器上发布</p>
+<h2 id="1-nginx直接发布编译好的vue项目"><a href="#1-nginx直接发布编译好的vue项目" class="headerlink" title="1.nginx直接发布编译好的vue项目"></a>1.nginx直接发布编译好的vue项目</h2><h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
+
+<p>nginx </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>/etc/nginx/nginx.conf</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#最简单的配置</span><br><span class="line">worker_processes 1;</span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    include       conf&#x2F;mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;                    #端口</span><br><span class="line">        server_name  localhost;             #主机名</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   html;                    #项目根目录</span><br><span class="line">            index  index.html index.htm;    #起始页</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>/etc/nginx/conf/mime.types</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">types &#123;</span><br><span class="line">  text&#x2F;html                             html htm shtml;</span><br><span class="line">  text&#x2F;css                              css;</span><br><span class="line">  text&#x2F;xml                              xml rss;</span><br><span class="line">  image&#x2F;gif                             gif;</span><br><span class="line">  image&#x2F;jpeg                            jpeg jpg;</span><br><span class="line">  application&#x2F;x-javascript              js;</span><br><span class="line">  text&#x2F;plain                            txt;</span><br><span class="line">  text&#x2F;x-component                      htc;</span><br><span class="line">  text&#x2F;mathml                           mml;</span><br><span class="line">  image&#x2F;png                             png;</span><br><span class="line">  image&#x2F;x-icon                          ico;</span><br><span class="line">  image&#x2F;x-jng                           jng;</span><br><span class="line">  image&#x2F;vnd.wap.wbmp                    wbmp;</span><br><span class="line">  application&#x2F;java-archive              jar war ear;</span><br><span class="line">  application&#x2F;mac-binhex40              hqx;</span><br><span class="line">  application&#x2F;pdf                       pdf;</span><br><span class="line">  application&#x2F;x-cocoa                   cco;</span><br><span class="line">  application&#x2F;x-java-archive-diff       jardiff;</span><br><span class="line">  application&#x2F;x-java-jnlp-file          jnlp;</span><br><span class="line">  application&#x2F;x-makeself                run;</span><br><span class="line">  application&#x2F;x-perl                    pl pm;</span><br><span class="line">  application&#x2F;x-pilot                   prc pdb;</span><br><span class="line">  application&#x2F;x-rar-compressed          rar;</span><br><span class="line">  application&#x2F;x-redhat-package-manager  rpm;</span><br><span class="line">  application&#x2F;x-sea                     sea;</span><br><span class="line">  application&#x2F;x-shockwave-flash         swf;</span><br><span class="line">  application&#x2F;x-stuffit                 sit;</span><br><span class="line">  application&#x2F;x-tcl                     tcl tk;</span><br><span class="line">  application&#x2F;x-x509-ca-cert            der pem crt;</span><br><span class="line">  application&#x2F;x-xpinstall               xpi;</span><br><span class="line">  application&#x2F;zip                       zip;</span><br><span class="line">  application&#x2F;octet-stream              deb;</span><br><span class="line">  application&#x2F;octet-stream              bin exe dll;</span><br><span class="line">  application&#x2F;octet-stream              dmg;</span><br><span class="line">  application&#x2F;octet-stream              eot;</span><br><span class="line">  application&#x2F;octet-stream              iso img;</span><br><span class="line">  application&#x2F;octet-stream              msi msp msm;</span><br><span class="line">  audio&#x2F;mpeg                            mp3;</span><br><span class="line">  audio&#x2F;x-realaudio                     ra;</span><br><span class="line">  video&#x2F;mpeg                            mpeg mpg;</span><br><span class="line">  video&#x2F;quicktime                       mov;</span><br><span class="line">  video&#x2F;x-flv                           flv;</span><br><span class="line">  video&#x2F;x-msvideo                       avi;</span><br><span class="line">  video&#x2F;x-ms-wmv                        wmv;</span><br><span class="line">  video&#x2F;x-ms-asf                        asx asf;</span><br><span class="line">  video&#x2F;x-mng                           mng;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+        <!-- reward -->
+        
+          <div id="reword-out">
+            <div id="reward-btn">
+              打赏
+            </div>
+          </div>
+        
+      </div>
+    
+
+    <!-- copyright -->
+    
+      <div class="declare">
+        <ul class="post-copyright">
+          <li>
+            <i class="ri-copyright-line"></i>
+            <strong>版权声明： </strong>
+            
+              本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+            
+          </li>
+        </ul>
+      </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wiidede.github.io/graduation-project-note/" alt="微信分享二维码">
     </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/graduation-project-note/" class="archive-article-date">
-  <time datetime="2021-04-26T21:30:33.000Z" itemprop="datePublished">04/26</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/graduation-project-note/"
-    >毕业设计部署踩坑笔记</a> 
-</h2>
- 
+</div>
 
-    </header>
-    
+<div id="share-mask"></div>
       
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li></ul>
+
+    </footer>
   </div>
 
+   
+  <nav class="article-nav">
     
     
-  </div>
+      <a href="/leetcode-cn-40/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">leetcode-cn-40-组合总和 II 以及回溯</div>
+      </a>
+    
+  </nav>
+
+
+  
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "kdLBgGeN6AO23LTQWDAqRttz-9Nh9j0Va",
+    app_key: "hWmkOGBqEpSlw81Gbqn4CSuF",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+
+  .vempty {
+    display: none !important;
+  }
+</style>
+
+
+  
+   
+  
+  
 </article>
-      
-  
-  
-  
-  </div>
-  </div>
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/git-change-local-account/" class="archive-article-date">
-  <time datetime="2020-09-15T12:11:52.000Z" itemprop="datePublished">09/15</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/git-change-local-account/"
-    >git 本地切换帐号</a> 
-</h2>
- 
 
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/deep-learning-note/" class="archive-article-date">
-  <time datetime="2020-04-03T19:29:41.000Z" itemprop="datePublished">04/03</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/deep-learning-note/"
-    >深度学习笔记</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/aliyun-note/" class="archive-article-date">
-  <time datetime="2020-01-11T16:09:31.000Z" itemprop="datePublished">01/11</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/aliyun-note/"
-    >阿里云学习笔记</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-  
-  </div>
-  </div>
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2019" class="archive-year">2019</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/mp3-player-note/" class="archive-article-date">
-  <time datetime="2019-07-04T14:40:25.000Z" itemprop="datePublished">07/04</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/mp3-player-note/"
-    >大三实训 MP3 播放器 硬件</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/warehousing-robot/" class="archive-article-date">
-  <time datetime="2019-03-10T00:12:27.000Z" itemprop="datePublished">03/10</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/warehousing-robot/"
-    >写给学姐瞎讲的机器人比赛相关</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-  
-  </div>
-  </div>
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2017" class="archive-year">2017</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/meizu-note6-exprience/" class="archive-article-date">
-  <time datetime="2017-10-07T22:41:05.000Z" itemprop="datePublished">10/07</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/meizu-note6-exprience/"
-    >魅蓝 note6 使用体验</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-      
-    </div>
-  </div>
-  
-  
-
-  
 </section>
       <footer class="footer">
   <div class="outer">
@@ -471,6 +460,23 @@ ga('send', 'pageview');
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: false,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
