@@ -98,7 +98,7 @@ ga('send', 'pageview');
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">406</span>
+            <span class="post-count">469</span>
         </span>
     </span>
 
@@ -130,9 +130,12 @@ ga('send', 'pageview');
 
          <h1 id="毕业设计部署踩坑笔记"><a href="#毕业设计部署踩坑笔记" class="headerlink" title="毕业设计部署踩坑笔记"></a>毕业设计部署踩坑笔记</h1><p>首先为什么要叫踩坑，主要还是之前从来没有正式的发布过</p>
 <p>其次就是最后想要的效果，就是用docker直接在服务器上发布</p>
-<h2 id="1-nginx直接发布编译好的vue项目"><a href="#1-nginx直接发布编译好的vue项目" class="headerlink" title="1.nginx直接发布编译好的vue项目"></a>1.nginx直接发布编译好的vue项目</h2><h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
+<h2 id="1-nginx直接发布编译好的vue项目"><a href="#1-nginx直接发布编译好的vue项目" class="headerlink" title="1.nginx直接发布编译好的vue项目"></a>1.nginx直接发布编译好的vue项目</h2><p>先停掉apache2或其他服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo /etc/init.d/apache2 stop</span><br></pre></td></tr></table></figure>
 
-<p>nginx </p>
+<h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
+
+<p>nginx 配置 我们使用最简单的配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -143,6 +146,12 @@ ga('send', 'pageview');
 <p>/etc/nginx/conf/mime.types</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">types &#123;</span><br><span class="line">  text&#x2F;html                             html htm shtml;</span><br><span class="line">  text&#x2F;css                              css;</span><br><span class="line">  text&#x2F;xml                              xml rss;</span><br><span class="line">  image&#x2F;gif                             gif;</span><br><span class="line">  image&#x2F;jpeg                            jpeg jpg;</span><br><span class="line">  application&#x2F;x-javascript              js;</span><br><span class="line">  text&#x2F;plain                            txt;</span><br><span class="line">  text&#x2F;x-component                      htc;</span><br><span class="line">  text&#x2F;mathml                           mml;</span><br><span class="line">  image&#x2F;png                             png;</span><br><span class="line">  image&#x2F;x-icon                          ico;</span><br><span class="line">  image&#x2F;x-jng                           jng;</span><br><span class="line">  image&#x2F;vnd.wap.wbmp                    wbmp;</span><br><span class="line">  application&#x2F;java-archive              jar war ear;</span><br><span class="line">  application&#x2F;mac-binhex40              hqx;</span><br><span class="line">  application&#x2F;pdf                       pdf;</span><br><span class="line">  application&#x2F;x-cocoa                   cco;</span><br><span class="line">  application&#x2F;x-java-archive-diff       jardiff;</span><br><span class="line">  application&#x2F;x-java-jnlp-file          jnlp;</span><br><span class="line">  application&#x2F;x-makeself                run;</span><br><span class="line">  application&#x2F;x-perl                    pl pm;</span><br><span class="line">  application&#x2F;x-pilot                   prc pdb;</span><br><span class="line">  application&#x2F;x-rar-compressed          rar;</span><br><span class="line">  application&#x2F;x-redhat-package-manager  rpm;</span><br><span class="line">  application&#x2F;x-sea                     sea;</span><br><span class="line">  application&#x2F;x-shockwave-flash         swf;</span><br><span class="line">  application&#x2F;x-stuffit                 sit;</span><br><span class="line">  application&#x2F;x-tcl                     tcl tk;</span><br><span class="line">  application&#x2F;x-x509-ca-cert            der pem crt;</span><br><span class="line">  application&#x2F;x-xpinstall               xpi;</span><br><span class="line">  application&#x2F;zip                       zip;</span><br><span class="line">  application&#x2F;octet-stream              deb;</span><br><span class="line">  application&#x2F;octet-stream              bin exe dll;</span><br><span class="line">  application&#x2F;octet-stream              dmg;</span><br><span class="line">  application&#x2F;octet-stream              eot;</span><br><span class="line">  application&#x2F;octet-stream              iso img;</span><br><span class="line">  application&#x2F;octet-stream              msi msp msm;</span><br><span class="line">  audio&#x2F;mpeg                            mp3;</span><br><span class="line">  audio&#x2F;x-realaudio                     ra;</span><br><span class="line">  video&#x2F;mpeg                            mpeg mpg;</span><br><span class="line">  video&#x2F;quicktime                       mov;</span><br><span class="line">  video&#x2F;x-flv                           flv;</span><br><span class="line">  video&#x2F;x-msvideo                       avi;</span><br><span class="line">  video&#x2F;x-ms-wmv                        wmv;</span><br><span class="line">  video&#x2F;x-ms-asf                        asx asf;</span><br><span class="line">  video&#x2F;x-mng                           mng;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译vue项目"><a href="#编译vue项目" class="headerlink" title="编译vue项目"></a>编译vue项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn run bulid</span><br></pre></td></tr></table></figure>
+
+<p>修改nginx.conf http server location root 为 项目所在位置 （dist文件夹）</p>
+<p>访问localhost，成功</p>
+<h3 id="发布flask应用"><a href="#发布flask应用" class="headerlink" title="发布flask应用"></a>发布flask应用</h3>
         
         <!-- reward -->
         
