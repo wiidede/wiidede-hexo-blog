@@ -688,7 +688,9 @@
 
 <p>修改nginx.conf http server location root 为 项目所在位置 （dist文件夹）</p>
 <p>访问localhost，成功</p>
-<h3 id="发布flask应用"><a href="#发布flask应用" class="headerlink" title="发布flask应用"></a>发布flask应用</h3>]]></content>
+<h3 id="发布flask应用"><a href="#发布flask应用" class="headerlink" title="发布flask应用"></a>发布flask应用</h3><p>这里没有其他项目就不用虚拟环境了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pip3 install gunicorn</span><br><span class="line">gunicorn -w 2 -b 127.0.0.1:5000 waterMeter:app</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>其他</category>
       </categories>
