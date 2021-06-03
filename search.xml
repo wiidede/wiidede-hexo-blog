@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>关于RSS的一些想法</title>
-    <url>/thinking-about-rss/</url>
+    <url>/wiidede-hexo-blog/thinking-about-rss/</url>
     <content><![CDATA[<h1 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h1><p>个人理解：一个网站发布内容，用户自行选择内容接受</p>
 <h1 id="网站生成RSS"><a href="#网站生成RSS" class="headerlink" title="网站生成RSS"></a>网站生成RSS</h1><p>hexo插件生成 <a href="/atom.xml">本网站RSS</a></p>
 <h1 id="APP的选择"><a href="#APP的选择" class="headerlink" title="APP的选择"></a>APP的选择</h1><p>暂无</p>
@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <title>关于我</title>
-    <url>/about-me/</url>
+    <url>/wiidede-hexo-blog/about-me/</url>
     <content><![CDATA[<h1 id="关于我（wiidede）"><a href="#关于我（wiidede）" class="headerlink" title="关于我（wiidede）"></a>关于我（wiidede）</h1><h2 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h2><p>出生：1999年</p>
 <p>专业：物联网工程</p>
 <p>酷安ID：DD王</p>
@@ -36,7 +36,7 @@
   </entry>
   <entry>
     <title>网站ToDo</title>
-    <url>/blog-todo-list/</url>
+    <url>/wiidede-hexo-blog/blog-todo-list/</url>
     <content><![CDATA[<h1 id="网站ToDo"><a href="#网站ToDo" class="headerlink" title="网站ToDo"></a>网站ToDo</h1><ul>
 <li><input checked="" disabled="" type="checkbox"> hexo-SEO优化，参考Ayer主题作者的<a href="https://shen-yu.gitee.io/2020/hexo-seo/">文章</a></li>
 <li><input disabled="" type="checkbox"> 评论邮箱提醒，使用第三方插件</li>
@@ -54,7 +54,7 @@
   </entry>
   <entry>
     <title>正则表达式 向前最短匹配</title>
-    <url>/reg-about-match-the-forward/</url>
+    <url>/wiidede-hexo-blog/reg-about-match-the-forward/</url>
     <content><![CDATA[<h1 id="正则表达式-向前最短匹配"><a href="#正则表达式-向前最短匹配" class="headerlink" title="正则表达式 向前最短匹配"></a>正则表达式 向前最短匹配</h1><p>使用正则表达式  <code>.*?</code>  可以向后匹配最短的，那么如何向前匹配最短的呢</p>
 <p>向前的不再能使用 <code>.*?</code> ，因为它会从第一个字母向后找，直到有匹配的，也就相当于找了一个最长的匹配</p>
 <p>所以这时候应该换一种思路</p>
@@ -75,7 +75,7 @@
   </entry>
   <entry>
     <title>监听剪贴板 在文字中匹配相应的内容 适用于题库</title>
-    <url>/listen-the-clipboard-and-match/</url>
+    <url>/wiidede-hexo-blog/listen-the-clipboard-and-match/</url>
     <content><![CDATA[<h1 id="监听剪贴板-在文字中匹配相应的内容-适用于题库"><a href="#监听剪贴板-在文字中匹配相应的内容-适用于题库" class="headerlink" title="监听剪贴板 在文字中匹配相应的内容 适用于题库"></a>监听剪贴板 在文字中匹配相应的内容 适用于题库</h1><p>最近有考试，还有题库，我就把之前写的监听剪贴板来搜索题库的程序拿了出来。虽然可能你更希望直接帮你答好，但有些网站只有一次考试机会，所以监听剪贴板反而更通用，虽然你 <code>ctrl + c</code> 可能会按的有点累，但总比一题一题搜（<code>ctrl + c</code> <code>切换到题库</code> <code>ctrl + f</code>   <code>ctrl + v</code>）快一点</p>
 <p>当然如果你有更好的方法也可以留言或者告诉我</p>
 <p>注意，如果网页不让你复制，不让你选择文字，请先安装油猴插件，再安装<a href="https://greasyfork.org/zh-CN/scripts/28497-remove-web-limits-modified">文字限制解除</a></p>
@@ -95,7 +95,7 @@
   </entry>
   <entry>
     <title>魅蓝 note6 使用体验</title>
-    <url>/meizu-note6-exprience/</url>
+    <url>/wiidede-hexo-blog/meizu-note6-exprience/</url>
     <content><![CDATA[<h2 id="魅蓝-note6-使用报告"><a href="#魅蓝-note6-使用报告" class="headerlink" title="魅蓝 note6 使用报告"></a>魅蓝 note6 使用报告</h2><p>开始用 note6 已有一个礼拜来总结一下吧</p>
 <h3 id="外观-amp-手感"><a href="#外观-amp-手感" class="headerlink" title="外观&amp;手感"></a>外观&amp;手感</h3><p>正面 2.5D 玻璃，加上白色，温润如玉。额头上，传感器，扬声器排列整齐。<br>背面经典双天线，大小双摄，也算是用心的。<br>虽然有点厚，有点重，手感是很棒的。<br>还有屏幕真的不是特别耐刮，我裸奔。<br>最高亮度 400 多尼特，反正比我 A0001 高</p>
 <h3 id="性能-amp-功耗"><a href="#性能-amp-功耗" class="headerlink" title="性能&amp;功耗"></a>性能&amp;功耗</h3><p>选择 note6 也是因为雷军吹 625 一代神U，不过确实，性能完全够用，续航更是比我之前的 A0001 好太多，中度使用一天还会剩很多电，18W 的快充也很令人满意，顺带说一句，魅族竟然配了24W的充电器，因为良心？？？</p>
@@ -112,7 +112,7 @@
   </entry>
   <entry>
     <title>写给学姐瞎讲的机器人比赛相关</title>
-    <url>/warehousing-robot/</url>
+    <url>/wiidede-hexo-blog/warehousing-robot/</url>
     <content><![CDATA[<h1 id="仓储机器人"><a href="#仓储机器人" class="headerlink" title="仓储机器人"></a>仓储机器人</h1><h2 id="调试阶段"><a href="#调试阶段" class="headerlink" title="调试阶段"></a>调试阶段</h2><h3 id="1-建图"><a href="#1-建图" class="headerlink" title="1.建图"></a>1.建图</h3><p>slam建图（见开发手册9）</p>
 <h3 id="2-添加航点"><a href="#2-添加航点" class="headerlink" title="2.添加航点"></a>2.添加航点</h3><p>有了航点就相当于告诉机器人下一个目标，它就会用amcl(蒙特卡洛自适应定位算法)自动导航到目标航点（见开发手册 10）</p>
 <h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>我们修改了路径规划的代码，本来路径规划是给出航点的名字或者序号，让机器人走到航点处，再走到下一个节点。我们让它走到航点处停下来进行拍照识别。</p>
@@ -145,7 +145,7 @@
   </entry>
   <entry>
     <title>大三实训 MP3 播放器 硬件</title>
-    <url>/mp3-player-note/</url>
+    <url>/wiidede-hexo-blog/mp3-player-note/</url>
     <content><![CDATA[<h1 id="大三实训-MP3-播放器-硬件"><a href="#大三实训-MP3-播放器-硬件" class="headerlink" title="大三实训 MP3 播放器 硬件"></a>大三实训 MP3 播放器 硬件</h1><h2 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h2><ol>
 <li><p>驼峰命名法</p>
 <ul>
@@ -565,7 +565,7 @@
   </entry>
   <entry>
     <title>阿里云学习笔记</title>
-    <url>/aliyun-note/</url>
+    <url>/wiidede-hexo-blog/aliyun-note/</url>
     <content><![CDATA[<h1 id="阿里云学习笔记-很久之前的尝试"><a href="#阿里云学习笔记-很久之前的尝试" class="headerlink" title="阿里云学习笔记(很久之前的尝试)"></a>阿里云学习笔记(很久之前的尝试)</h1><h2 id="购买服务器"><a href="#购买服务器" class="headerlink" title="购买服务器"></a>购买服务器</h2><p>选择套餐（注册免费试用）</p>
 <p>ip地址：xx.xx.xx.xx</p>
 <p>选择了ubuntu14.04（免费试用没有更高的版本）</p>
@@ -618,7 +618,7 @@
   </entry>
   <entry>
     <title>深度学习笔记</title>
-    <url>/deep-learning-note/</url>
+    <url>/wiidede-hexo-blog/deep-learning-note/</url>
     <content><![CDATA[<h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><h2 id="一个最基础的例子"><a href="#一个最基础的例子" class="headerlink" title="一个最基础的例子"></a>一个最基础的例子</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l0 = tf.keras.layers.Dense(units=<span class="number">1</span>, input_shape=[<span class="number">1</span>]) </span><br><span class="line">model = tf.keras.Sequential([l0])</span><br><span class="line">model.compile(loss=<span class="string">&#x27;mean_squared_error&#x27;</span>, optimizer=tf.keras.optimizers.Adam(<span class="number">0.1</span>))</span><br><span class="line">history = model.fit(celsius_q, fahrenheit_a, epochs=<span class="number">500</span>, verbose=<span class="literal">False</span>)</span><br><span class="line">model.predict([<span class="number">100.0</span>])</span><br></pre></td></tr></table></figure>
 
 <h2 id="术语："><a href="#术语：" class="headerlink" title="术语："></a>术语：</h2><ul>
@@ -653,7 +653,7 @@
   </entry>
   <entry>
     <title>git 本地切换帐号</title>
-    <url>/git-change-local-account/</url>
+    <url>/wiidede-hexo-blog/git-change-local-account/</url>
     <content><![CDATA[<h1 id="git-切换本地帐号"><a href="#git-切换本地帐号" class="headerlink" title="git 切换本地帐号"></a>git 切换本地帐号</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> user.name wiidede</span><br><span class="line">git config --<span class="built_in">local</span> user.email wiixdede@gmail.com</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>其他</category>
@@ -664,7 +664,7 @@
   </entry>
   <entry>
     <title>毕业设计部署踩坑笔记</title>
-    <url>/graduation-project-note/</url>
+    <url>/wiidede-hexo-blog/graduation-project-note/</url>
     <content><![CDATA[<h1 id="毕业设计部署踩坑笔记"><a href="#毕业设计部署踩坑笔记" class="headerlink" title="毕业设计部署踩坑笔记"></a>毕业设计部署踩坑笔记</h1><p>首先为什么要叫踩坑，主要还是之前从来没有正式的发布过</p>
 <p>其次就是最后想要的效果，就是用docker直接在服务器上发布</p>
 <h2 id="1-nginx直接发布编译好的vue项目"><a href="#1-nginx直接发布编译好的vue项目" class="headerlink" title="1.nginx直接发布编译好的vue项目"></a>1.nginx直接发布编译好的vue项目</h2><p>先停掉apache2或其他服务</p>
@@ -703,7 +703,7 @@
   </entry>
   <entry>
     <title>整理一些css样式</title>
-    <url>/several-css-style/</url>
+    <url>/wiidede-hexo-blog/several-css-style/</url>
     <content><![CDATA[<h1 id="整理一些css样式"><a href="#整理一些css样式" class="headerlink" title="整理一些css样式"></a>整理一些css样式</h1><h2 id="渐变文字"><a href="#渐变文字" class="headerlink" title="渐变文字"></a>渐变文字</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">360deg</span>, #<span class="number">97</span>E9FF <span class="number">0%</span>, #FFFFFF <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">-webkit-background-clip</span>: text;</span><br><span class="line">    <span class="attribute">-webkit-text-fill-color</span>: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">12px</span> <span class="built_in">rgba</span>(<span class="number">24</span>, <span class="number">230</span>, <span class="number">255</span>, <span class="number">0.63</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -727,7 +727,7 @@
   </entry>
   <entry>
     <title>vue隔代组件层层动态插槽并且附带数据</title>
-    <url>/vue-slot-with-two-generation/</url>
+    <url>/wiidede-hexo-blog/vue-slot-with-two-generation/</url>
     <content><![CDATA[<h1 id="vue隔代组件层层动态插槽并且附带数据"><a href="#vue隔代组件层层动态插槽并且附带数据" class="headerlink" title="vue隔代组件层层动态插槽并且附带数据"></a>vue隔代组件层层动态插槽并且附带数据</h1><p>最近写代码，孙子组件有插槽，想要在爷爷组件里面往孙子组件里面插东西，发现插不进去，于是在父组件也建立了一个插槽。</p>
 <p>比较特殊的地方在于这个插槽的名字是动态的，而且可能不止一个（v-for根据数据循环判断有多少插槽）</p>
 <h2 id="孙子组件"><a href="#孙子组件" class="headerlink" title="孙子组件"></a>孙子组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div v-for&#x3D;&quot;(item,index) in config&quot; :key&#x3D;index&gt;</span><br><span class="line">	&lt;span v-if&#x3D;&quot;item.custom&quot;&gt;</span><br><span class="line">        &lt;slot :name&#x3D;&quot;item.custom&quot; :value&#x3D;&quot;item.key&quot; :index&#x3D;&quot;index&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">	&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
@@ -751,7 +751,7 @@
   </entry>
   <entry>
     <title>vue判断字符串是否溢出来显示弹窗</title>
-    <url>/vue-auto-show-tooltip/</url>
+    <url>/wiidede-hexo-blog/vue-auto-show-tooltip/</url>
     <content><![CDATA[<h1 id="vue判断字符串是否溢出来显示弹窗"><a href="#vue判断字符串是否溢出来显示弹窗" class="headerlink" title="vue判断字符串是否溢出来显示弹窗"></a>vue判断字符串是否溢出来显示弹窗</h1><p>总体的思路就是获取dom元素，根据dom元素的 <code>clientWidth</code> 与 <code>scrollWidth</code> 来判断是否溢出，我这里正好碰到v-for，所以需要动态绑定每一个元素的ref</p>
 <h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div v-for&#x3D;&quot;item in items&quot; :key&#x3D;&quot;item.id&quot;&gt;</span><br><span class="line">    &lt;el-tooltip</span><br><span class="line">                :disabled&#x3D;&quot;isOverflow($refs[item.id])&quot;</span><br><span class="line">                :content&#x3D;&quot;&#96;$&#123;item.content&#125;&#96;&quot;</span><br><span class="line">                effect&#x3D;&quot;dark&quot;</span><br><span class="line">                placement&#x3D;&quot;top&quot;&gt;</span><br><span class="line">        &lt;span :ref&#x3D;&quot;item.id&quot;&gt;&#123;&#123; item.content &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;el-tooltip&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
@@ -773,7 +773,7 @@
   </entry>
   <entry>
     <title>整理一些js写法</title>
-    <url>/several-js-grammar/</url>
+    <url>/wiidede-hexo-blog/several-js-grammar/</url>
     <content><![CDATA[<h1 id="整理一些js写法"><a href="#整理一些js写法" class="headerlink" title="整理一些js写法"></a>整理一些js写法</h1><h2 id="从元素为对象的数组中提取出对象的某属性为x的快速写法，摘自vuex教程"><a href="#从元素为对象的数组中提取出对象的某属性为x的快速写法，摘自vuex教程" class="headerlink" title="从元素为对象的数组中提取出对象的某属性为x的快速写法，摘自vuex教程"></a>从元素为对象的数组中提取出对象的某属性为x的快速写法，摘自vuex教程</h2><p>说到底是Array的find()、filter()方法</p>
 <p>find返回的是数组里第一个符合条件的选项，</p>
 <p>filter返回的是数组里符合条件的选项集合，是一个数组</p>
@@ -826,7 +826,7 @@
   </entry>
   <entry>
     <title>ElementUI timePicker 增加此刻按钮 引发的dom操作的学习</title>
-    <url>/element-ui-time-picker-add-now-button/</url>
+    <url>/wiidede-hexo-blog/element-ui-time-picker-add-now-button/</url>
     <content><![CDATA[<h1 id="ElementUI-timePicker-增加此刻按钮-引发的dom操作的学习"><a href="#ElementUI-timePicker-增加此刻按钮-引发的dom操作的学习" class="headerlink" title="ElementUI timePicker 增加此刻按钮 引发的dom操作的学习"></a>ElementUI timePicker 增加此刻按钮 引发的dom操作的学习</h1><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>获取timePicker弹出框的footer元素</p>
 <p>替换原来的取消按钮</p>
 <p>&lt;template&gt;</p>
@@ -849,7 +849,7 @@
   </entry>
   <entry>
     <title>一言</title>
-    <url>/one-sentence/</url>
+    <url>/wiidede-hexo-blog/one-sentence/</url>
     <content><![CDATA[<h1 id="一言"><a href="#一言" class="headerlink" title="一言"></a>一言</h1><blockquote>
 <p>我所有的自負皆來自我的自卑，所有的英雄氣概都來自於我的軟弱。嘴裡振振有詞是因為心裡滿是懷疑，深情是因為痛恨自己無情。這世界沒有一件事情是虛空而生的，站在光里，背後就會有陰影，這深夜裡一片寂靜，是因為你還沒有聽見聲音。 ——馬良《坦白书》</p>
 </blockquote>
@@ -923,7 +923,7 @@
   </entry>
   <entry>
     <title>leetcode-cn-115-不同的子序列</title>
-    <url>/leetcode-cn-115/</url>
+    <url>/wiidede-hexo-blog/leetcode-cn-115/</url>
     <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a><a href="https://leetcode-cn.com/problems/distinct-subsequences/">题目</a></h1><p>给定一个字符串 <code>s</code> 和一个字符串 <code>t</code> ，计算在 <code>s</code> 的子序列中 <code>t</code> 出现的个数。</p>
 <h2 id="递归遍历（超时）"><a href="#递归遍历（超时）" class="headerlink" title="递归遍历（超时）"></a>递归遍历（超时）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>遍历s，如果首字母相等，去掉s、t的首字母，继续求解</p>
 <p>终止条件是t的首字母都被去掉了，也就是匹配成功，count++</p>
@@ -1009,7 +1009,7 @@
   </entry>
   <entry>
     <title>leetcode-cn-40-组合总和 II 以及回溯</title>
-    <url>/leetcode-cn-40/</url>
+    <url>/wiidede-hexo-blog/leetcode-cn-40/</url>
     <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a><a href="https://leetcode-cn.com/problems/combination-sum-ii/">题目</a></h1><p>给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。</p>
 <p>candidates 中的每个数字在每个组合中只能使用一次。</p>
 <h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>一般的回溯</p>
