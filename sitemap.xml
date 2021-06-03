@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wiidede.github.io/wiidede-hexo-blog/several-css-style/</loc>
+    <loc>https://wiidede.github.io/wiidede-hexo-blog/graduation-project-note/</loc>
     
     <lastmod>2021-06-03</lastmod>
     
@@ -65,6 +65,13 @@
   </url>
   
   <url>
+    <loc>https://wiidede.github.io/wiidede-hexo-blog/deep-learning-note/</loc>
+    
+    <lastmod>2021-06-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wiidede.github.io/wiidede-hexo-blog/git-change-local-account/</loc>
     
     <lastmod>2021-06-03</lastmod>
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://wiidede.github.io/wiidede-hexo-blog/graduation-project-note/</loc>
+    <loc>https://wiidede.github.io/wiidede-hexo-blog/about-me/</loc>
     
     <lastmod>2021-06-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wiidede.github.io/wiidede-hexo-blog/about-me/</loc>
+    <loc>https://wiidede.github.io/wiidede-hexo-blog/several-css-style/</loc>
     
     <lastmod>2021-06-03</lastmod>
     
@@ -115,13 +122,6 @@
   
   <url>
     <loc>https://wiidede.github.io/wiidede-hexo-blog/one-sentence/</loc>
-    
-    <lastmod>2021-06-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wiidede.github.io/wiidede-hexo-blog/deep-learning-note/</loc>
     
     <lastmod>2021-06-03</lastmod>
     
@@ -249,6 +249,13 @@
   </url>
   
   <url>
+    <loc>https://wiidede.github.io/wiidede-hexo-blog/tags/deep-learing/</loc>
+    <lastmod>2021-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wiidede.github.io/wiidede-hexo-blog/tags/git/</loc>
     <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
@@ -299,13 +306,6 @@
   
   <url>
     <loc>https://wiidede.github.io/wiidede-hexo-blog/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2021-06-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wiidede.github.io/wiidede-hexo-blog/tags/deep-learing/</loc>
     <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
