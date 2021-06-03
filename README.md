@@ -1,10 +1,12 @@
-# wiidede.github.io
+# wiidede.github.io/wiidede-hexo-blog/
 
-wiidede's bolg
+> 新的博客地址：https://wiidede.github.io/
+
+wiidede's bolg(旧)
 
 个人博客网站
 
-> [点击此处访问(github)](https://wiidede.github.io/)
+> [点击此处访问(github)](https://wiidede.github.io/wiidede-hexo-blog/)
 
 > [点击此处访问(gitee)](https://wiidede.gitee.io/)
 
